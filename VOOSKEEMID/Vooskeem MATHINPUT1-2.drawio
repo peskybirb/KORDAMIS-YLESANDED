@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Leht-1" id="cdAGWX-49KcNeQW-xpkk">
+    <mxGraphModel dx="451" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="S6PkFNsIu3iv_qNre21f-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" edge="1" parent="1" source="S6PkFNsIu3iv_qNre21f-1" target="S6PkFNsIu3iv_qNre21f-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-1" value="ALGUS" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="334" y="20" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" edge="1" parent="1" source="S6PkFNsIu3iv_qNre21f-2" target="S6PkFNsIu3iv_qNre21f-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-2" value="Kuvame kasutajale teksti &quot;Mis on teie nimi ?&quot;&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="316" y="130" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" edge="1" parent="1" source="S6PkFNsIu3iv_qNre21f-4" target="S6PkFNsIu3iv_qNre21f-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-4" value="Tekitame uue sõne tüüpi muutuja &quot;Nimi1&quot; ja jätame selle tühjaks" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" vertex="1" parent="1">
+          <mxGeometry x="316" y="210" width="196" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" edge="1" parent="1" source="S6PkFNsIu3iv_qNre21f-6" target="S6PkFNsIu3iv_qNre21f-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-6" value="Ootame kuni kasutaja asisestab käsureale oma nimi ning omistame selle muutujasse &quot;Nimi1&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="324" y="300" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" edge="1" parent="1" source="S6PkFNsIu3iv_qNre21f-8" target="S6PkFNsIu3iv_qNre21f-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-8" value="Kuvame kasutajale teksti kasutades Muutujas &quot;Nimi1&quot; olevat väärtust &quot;Tere, &amp;lt;Nimi1&amp;gt;&amp;nbsp; !&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="314" y="400" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="S6PkFNsIu3iv_qNre21f-10" value="LÕPP" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="354" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

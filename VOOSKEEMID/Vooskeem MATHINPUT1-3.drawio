@@ -1,0 +1,61 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram name="Leht-1" id="CosGGBsI0Qe1CJGK20Gf">
+    <mxGraphModel dx="320" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0GALU9wb_qZHCmEudCYX-3" edge="1" parent="1" source="0GALU9wb_qZHCmEudCYX-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" target="0GALU9wb_qZHCmEudCYX-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0GALU9wb_qZHCmEudCYX-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" value="ALGUS" vertex="1">
+          <mxGeometry height="80" width="120" x="387.5" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="0GALU9wb_qZHCmEudCYX-5" edge="1" parent="1" source="0GALU9wb_qZHCmEudCYX-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" target="0GALU9wb_qZHCmEudCYX-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0GALU9wb_qZHCmEudCYX-2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="Tekitame täisarvu tüüpi muutuja &quot;Koomikaal&quot; millesse omastame algväärtuseks 0" vertex="1">
+          <mxGeometry height="60" width="185" x="355" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="0GALU9wb_qZHCmEudCYX-8" edge="1" parent="1" source="0GALU9wb_qZHCmEudCYX-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" target="0GALU9wb_qZHCmEudCYX-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0GALU9wb_qZHCmEudCYX-4" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Tekitame täsarvu tüüpi muutuja &quot;sõpradearv&quot; millesse omastame algväärtuse 0" vertex="1">
+          <mxGeometry height="70" width="190" x="352.5" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-6" edge="1" parent="1" source="0GALU9wb_qZHCmEudCYX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" target="eXqKBPoBl3G1XrA4h-4u-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0GALU9wb_qZHCmEudCYX-7" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Kuvame kasutajale teksti &quot;Mitu grammi kommi sul on ? (palun sisesta täisarv)&quot;" vertex="1">
+          <mxGeometry height="80" width="195" x="350" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-9" edge="1" parent="1" source="eXqKBPoBl3G1XrA4h-4u-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" target="eXqKBPoBl3G1XrA4h-4u-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-3" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Kuvame kasutajale teksti &quot;Mitmele inimesele sa kommi ostsid ?&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&quot;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="195" x="350" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-8" edge="1" parent="1" source="eXqKBPoBl3G1XrA4h-4u-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" target="eXqKBPoBl3G1XrA4h-4u-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;" value="Ootame kuni kasutaja sisestab käsureale arvu mille omistame muutujasse &quot;Kommikaal&quot;" vertex="1">
+          <mxGeometry height="70" width="140" x="377.5" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-11" edge="1" parent="1" source="eXqKBPoBl3G1XrA4h-4u-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" target="eXqKBPoBl3G1XrA4h-4u-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;gradientColor=#ffd966;strokeColor=#d6b656;" value="Ootame kuni kasutaja sisestab käsureale arvu mille omistame muutujasse &quot;sõpradearv&quot;" vertex="1">
+          <mxGeometry height="70" width="140" x="377.5" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-13" edge="1" parent="1" source="eXqKBPoBl3G1XrA4h-4u-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" target="eXqKBPoBl3G1XrA4h-4u-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-10" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="Kuvame kasutajale teksti &quot;Iga sõber saab &amp;lt;kommikaal/sopradearv&amp;gt; grammi kommi&quot;" vertex="1">
+          <mxGeometry height="80" width="175" x="360" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="eXqKBPoBl3G1XrA4h-4u-12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" value="LÕPP" vertex="1">
+          <mxGeometry height="80" width="120" x="387.5" y="860" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

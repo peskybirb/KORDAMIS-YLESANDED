@@ -1,0 +1,178 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram name="Page-1" id="6d2jPUA3ufHbYMlLnBi6">
+    <mxGraphModel dx="2377" dy="1482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-9" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" value="Algus" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-2" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-3" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="tekitame muutuja &quot;esmaspäev&quot; ja omistame sellesse algväärtuse 0" vertex="1">
+          <mxGeometry height="80" width="160" x="60" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-4" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-5" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="tekitame muutuja &quot;teisipäev&quot; ja omistame sellesse algväärtuse 0" vertex="1">
+          <mxGeometry height="80" width="160" x="60" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-6" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-7" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="tekitame muutuja &quot;kolmapäev&quot; ja omistame sellesse algväärtuse 0" vertex="1">
+          <mxGeometry height="80" width="160" x="60" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-11" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-8" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="tekitame muutuja &quot;neljapäev&quot; ja omistame sellesse algväärtuse 0" vertex="1">
+          <mxGeometry height="80" width="160" x="60" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-13" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-10" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="tekitame muutuja &quot;reede&quot; ja omistame sellesse algväärtuse 0" vertex="1">
+          <mxGeometry height="80" width="160" x="60" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-17" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-12" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Kuvame kasutajale teksti &quot;Kui palju sa mängisid videomänge esmaspäeval ? (minutites)&quot;" vertex="1">
+          <mxGeometry height="90" width="170" x="55" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-19" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-14" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Kuvame kasutajale teksti &quot;Kui palju sa mängisid videomänge teisipäeval ? (minutites)&quot;" vertex="1">
+          <mxGeometry height="90" width="170" x="55" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-20" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" value="Ootame kuni kasutaja sisestab väärtuse käsureale mille omastame muutujasse &quot;esmaspäev&quot;" vertex="1">
+          <mxGeometry height="70" width="160" x="60" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-28" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" value="Ootame kuni kasutaja sisestab väärtuse käsureale mille omastame muutujasse &quot;teisipäev&quot;" vertex="1">
+          <mxGeometry height="70" width="160" x="60" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-21" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-26" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-22" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Kuvame kasutajale teksti &quot;Kui palju sa mängisid videomänge kolmapäeval ? (minutites)&quot;" vertex="1">
+          <mxGeometry height="90" width="170" x="55" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-23" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-24" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Kuvame kasutajale teksti &quot;Kui palju sa mängisid videomänge neljapäeval ? (minutites)&quot;" vertex="1">
+          <mxGeometry height="90" width="170" x="55" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-25" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-24" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" value="Ootame kuni kasutaja sisestab väärtuse käsureale mille omastame muutujasse &quot;kolmapäev&quot;" vertex="1">
+          <mxGeometry height="70" width="160" x="60" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-32" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-30" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" value="Ootame kuni kasutaja sisestab väärtuse käsureale mille omastame muutujasse &quot;neljapäev&quot;" vertex="1">
+          <mxGeometry height="70" width="160" x="60" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-29" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-30" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Kuvame kasutajale teksti &quot;Kui palju sa mängisid videomänge reedel ? (minutites)&quot;" vertex="1">
+          <mxGeometry height="90" width="170" x="55" y="1460" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-34" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" value="Ootame kuni kasutaja sisestab väärtuse käsureale mille omastame muutujasse &quot;reede&quot;" vertex="1">
+          <mxGeometry height="70" width="160" x="60" y="1570" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-36" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-35" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-33" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="tekitame muutuja &quot;ajakulu&quot; ja omistame selle sisse muutujate &quot;esmaspäev , teisipäev , kolmapäev , niljapäev , reede&quot; summa" vertex="1">
+          <mxGeometry height="90" width="200" x="40" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-38" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-37" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-35" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="tekitame muutuja &quot;päevakeskmine&quot; ja omistame selle sisse väärtuse 0&amp;nbsp;" vertex="1">
+          <mxGeometry height="70" width="210" x="35" y="1770" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-40" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-39" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-37" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Arvutame kokku päeva keskmise ajakulu ja omistame selle vastuse muutujasse &quot;päevakeskmine&quot;" vertex="1">
+          <mxGeometry height="80" width="205" x="37.5" y="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-44" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-43" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-39" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Kuvame kasutajale teksti kasutades muutujat &quot;ajakulu&quot;, &quot;Sul kulus mängimisele see nädal {ajakulu} minutit&quot;" vertex="1">
+          <mxGeometry height="90" width="210" x="35" y="1960" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-46" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-45" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-43" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" value="Kuvame kasutajale teksti kasutades muutujat &quot;päevakeskmine&quot;, &quot;Sul kulus mängimisele keskmiselt {päevakeskmine} minutit päevas&quot;" vertex="1">
+          <mxGeometry height="90" width="210" x="35" y="2070" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-48" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-47" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-45" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="tekitame muutuja &quot;tundidesajakulu&quot; ja arvutame selle sisse&amp;nbsp; ajakulu tundides&amp;nbsp;" vertex="1">
+          <mxGeometry height="70" width="210" x="35" y="2180" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-50" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="dY_al8qE6kW2ZrQG3pTw-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-51" connectable="0" parent="dY_al8qE6kW2ZrQG3pTw-50" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="JAH" vertex="1">
+          <mxGeometry relative="1" x="-0.2476" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-47" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e6d0de;gradientColor=#d5739d;strokeColor=#996185;" value="kas muutujas &quot;Tundidedsajakulu&quot; olev väärtus on 35 tundi või suurem" vertex="1">
+          <mxGeometry height="160" width="170" x="55" y="2270" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-53" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="dY_al8qE6kW2ZrQG3pTw-52" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-49" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="Kuvame kasutajale teksti &quot;sinu mängimisele kulub peaaegu samasugune aeg nagu tavalisel inimesel töönädalas töötamisele&quot;" vertex="1">
+          <mxGeometry height="90" width="200" x="40" y="2500" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-52" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" value="LÕPP" vertex="1">
+          <mxGeometry height="80" width="120" x="80" y="2640" as="geometry" />
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-54" edge="1" parent="1" source="dY_al8qE6kW2ZrQG3pTw-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.547;entryDx=0;entryDy=0;entryPerimeter=0;" target="dY_al8qE6kW2ZrQG3pTw-52">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="245" y="2350" />
+              <mxPoint x="245" y="2684" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-55" connectable="0" parent="dY_al8qE6kW2ZrQG3pTw-54" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="EI" vertex="1">
+          <mxGeometry relative="1" x="-0.7918" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dY_al8qE6kW2ZrQG3pTw-56" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="WELP" vertex="1">
+          <mxGeometry height="30" width="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

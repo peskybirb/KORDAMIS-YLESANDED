@@ -1,0 +1,91 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Leht-1" id="X5lL7QdzsTYYMmoI7t_C">
+    <mxGraphModel dx="1921" dy="1029" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-1" target="0FZaUzSi_F4WA-e0_Ju6-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-1" value="ALGUS" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="130" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-2" target="0FZaUzSi_F4WA-e0_Ju6-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-2" value="Kuva kasutajale tekst &quot;palun sisesta oma suunakood&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-6" target="0FZaUzSi_F4WA-e0_Ju6-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-6" value="tekitame täisarvulise muutuja &quot;suunakood&quot; mille algväärtuseks on &quot;0&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-8" target="0FZaUzSi_F4WA-e0_Ju6-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-8" value="Ootame kuni kasutaja sisestab suunakoodi" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-10" target="0FZaUzSi_F4WA-e0_Ju6-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-14" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0FZaUzSi_F4WA-e0_Ju6-13">
+          <mxGeometry x="0.28" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-10" value="Kas kasutaja pool sisestatud suunakoodi pikkus on suurem kui &quot;9999&quot;?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="510" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-12" target="0FZaUzSi_F4WA-e0_Ju6-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-12" target="0FZaUzSi_F4WA-e0_Ju6-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-18" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0FZaUzSi_F4WA-e0_Ju6-17">
+          <mxGeometry x="-0.8386" y="2" relative="1" as="geometry">
+            <mxPoint x="-2" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-12" target="0FZaUzSi_F4WA-e0_Ju6-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-12" value="Kas kasutaja pool sisestatud suunakoodi pikkus on väiksem kui &quot;100000&quot;?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="630" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-15" target="0FZaUzSi_F4WA-e0_Ju6-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-15" value="Kuva kasutajale tekst &quot;I know where u live hehehee&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-19" target="0FZaUzSi_F4WA-e0_Ju6-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-19" value="Kuva kasutajale tekst &quot;üks täht on puudu&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.531;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-10" target="0FZaUzSi_F4WA-e0_Ju6-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-21" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0FZaUzSi_F4WA-e0_Ju6-20">
+          <mxGeometry x="0.675" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0FZaUzSi_F4WA-e0_Ju6-22" target="0FZaUzSi_F4WA-e0_Ju6-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-22" value="Kuva kasutajale tekst &quot;üks täht on üle&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0FZaUzSi_F4WA-e0_Ju6-24" value="LÕPP" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="870" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

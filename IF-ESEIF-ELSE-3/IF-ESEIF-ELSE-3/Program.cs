@@ -28,21 +28,102 @@
             //kui suunakood on suurem kui 5 tähte, ütle talle, 1 täht on üle
             //kui suunakoodis on 5 tähte, ütle "ahha nüüd tean kus elad"
 
-            int suunakood = 0;
+
+            // võib natukene erineda kuna võtsin programmi oma repost
+
+            int suunaKood = 0;
+            // "int" on täisarvuline muutuja mille järele pannakse selle nimetus.
+            // "=" ühekordne võrdusmärk omistab muutuja sisse väärtuse mis on peale       võrdusmärki.
+            // hetkel sisestatakse muutujasse "suunaKood" väärtus "0".
+            // Lause lõpetab lasuselõpu märk ";".
+
             Console.WriteLine("Palun sisesta oma suunakood");
-            suunakood = int.Parse(Console.ReadLine());
-            if (suunakood > 9999 && suunakood < 10000)
+            // "Coonsole" on C# käsurea addresseerimise pakett millega saab teha erinevaid operatsioone.
+            // "." punkti kasutatakse et lisada eelnevale "Console" käsule mingisugune funktsioon.
+            // "WriteLine" on funktsioon mis kuvab väärtusi käsureale (uuele reale.)
+            // "()" sulupaar omab funktsiooni tööks vajalikku infot.
+            // "" tähistab sõne tüüpi andmeid . Andmed ise asuvad jutumärkide vahel.
+            // ";" lause lõpetab lauselõpu märk.
+
+            suunaKood = int.Parse(Console.ReadLine());
+            // "suunaKood" on eelnevalt väljatoodud täisarvuline muutuja.
+            // "=" ühekordne võrdusmärk omistab muutuja sisse väärtuse mis on peale võrdusmärki.
+            // "int" tähistab täisarvulist muutujat.
+            // "." punkti kasutatakse et saada punktist eelnevale meetodile mingi funktsioon mis kirjutatakse pärast punkti.
+            // "Parse" on tekstist katse teisendada mingit tüüpi arvandmeid.
+            // "()" sulupaar omab funktsiooni tööks vajalikku infot.
+            // "Coonsole" on C# käsurea addresseerimise pakett millega saab teha erinevaid operatsioone.
+            // "." punkti kasutatakse et saada punktist eelnevale meetodile mingi funktsioon mis kirjutatakse pärast punkti
+            // "ReadLine" on funktsioon mis loeb käsureale vaikimisi sõne tüüpi andmeid.
+            // "()" sulupaar omab funktsiooni tööks vajalikku infot.
+            // ";" lause lõppeb lauselõpu märgiga.
+
+            if (suunaKood > 9999 && suunaKood < 10000)
+            // "if" on kaitstud sõna mis kutsub esile tingimus lause mille tingimusavaldis on sellele järgnevate sulgude sees.
+            // "()" sulupaar omab funktsiooni tööks vajalikku infot.
+            // "suunaKood" on eelnevalt välja toodud täisarvuline muutuja.
+            // ">" ehk suurem kui märgist vasakul pool olev väärtus peab olema suurem kui märgist paremal pool olev väärtus et tehe oleks tõene.
+            // "9999" hard kooditud väärtus mida võrreldakse täisarvulise muutuja  "suunaKood" vastu
+            // "&&" ehk AND loogiline tehe mida kasutatakse tingimuste kirjutamisel. See annab positiivse vastuse kui mõlemal pool märki olevad vastused on ka positiivsed.
+            // "suunaKood" on eelnevalt välja toodud täisarvuline muutuja.
+            // "<" ehk väiksem kui märgist vasakul pool olev väärtus peab olema väiksem kui märgist paremal pool olev väärtus et tehe oleks tõene.
+            // "10000" hardkooditud väärtus mida võrreldakse täisarvulise muutuja  "suunaKood" vastu.
+
             {
-                Console.WriteLine("Now I know where you live hehehee");
+            // "{" loogiline sulg tähistab koodi ploki konteineri algust 
+
+                Console.WriteLine("Nüüd ma tean kus sa elad");
+                // "Coonsole" on C# käsurea addresseerimise pakett millega saab teha erinevaid funktsioone.
+                // "." punkt on eelmise elemendi addreseerimiseks et saaks lisada sellele mingisuguse meetod funktsiooni.
+                // "WriteLine" on funktsioon mida kasutatakse käsureale teksti või ka kaasatud parameetrite kuvamiseks.
+                // "()" sulupaar omab funktsiooni tööks vajalikku infot.
+                // "Nüüd ma tean kus sa elad" on sõne tüüpi muutuja mida parasjagu kuvatakse käsureale.
+                // ";" koodirea lõpeta lauselõpumärgiga
+
             }
-            else if (suunakood <= 9999)
+            // "}" loogiline sulg tähistab koodi ploki konteineri lõppu
+
+                 else if (suunaKood <= 9999)
+            // "else if" on kaitstud sõna ja sekundaarne tingimuslause mille tingimus on selle järele kirjutatud sulgude vahel. enne else if peab eelnema kas "if" või teine "else if". Tingimuse "False" korral liigutakse edasi ja ei täideta "else if" sees olevat koodi plokki. (viimane lause käib ka "if" kohta)  
+            // "()" sulupaar omab funktsiooni tööks vajalikku infot.
+            //"suunaKood" on eelnevalt välja toodud täisarvuline muutuja.
+            // "<=" ehk väiksem kui või võrdne . Kontrolib kas märgist vasakul pool olev väärtus või muutujas olev väärtus on väiksem kui või võrdne paremal pool oleva väärtusega.
+            // "9999" hard kooditud väärtus mid avõrreldakse väärtusega mis on muutujas "suunaKood".
+
             {
+                // "{" loogiline sulg tähistab koodi ploki konteineri algust 
+
                 Console.WriteLine("üks täht on puudu");
+                // "Console" on C# käsurea addresseerimise pakett millega saab teha erinevaid funktsioone.
+                // "." punkt on eelmise elemendi addreseerimiseks et saaks lisada sellele mingisuguse meetod funktsiooni.
+                // "WriteLine" on funktsioon mida kasutatakse käsureale teksti või ka kaasatud parameetrite kuvamiseks.
+                // "()" sulupaar omab funktsiooni tööks vajalikku infot.
+                // "üks täht on puudu" on sõne tüüpi muutuja mida parasjagu kuvatakse käsureale (kui just programm on sinnamaani jõudnud).
+                // ";" koodirea lõpeta lauselõpumärgiga
+
             }
+            // "}" loogiline sulg tähistab koodi ploki konteineri lõppu
+
             else
-            {
-                Console.WriteLine("üks täht on üle");
+            // "else" on kaitstud sõna mis kutsub esile järeltingimus lause millele peab eelnema kas "if" või "else if" tingimuslause . "Else" koodiploki sisu täidetakse ilma selle oma tingimuse kontrollita (ehk kasutatakse viimasena kui kõik tingimused on läbikukkunud).
+
+          {
+          // "{" loogiline sulg tähistab koodi ploki konteineri algust 
+
+                  Console.WriteLine("üks täht on üle");
+                // "Console" on C# käsurea addresseerimise pakett millega saab teha erinevaid funktsioone.
+                // "." punkt on eelmise elemendi addreseerimiseks et saaks lisada sellele mingisuguse meetod funktsiooni.
+                // "WriteLine" on funktsioon mida kasutatakse käsureale teksti või ka kaasatud parameetrite kuvamiseks.
+                // "()" sulupaar omab funktsiooni tööks vajalikku infot.
+                // "üks täht on üle" on sõne tüüpi muutuja mida parasjagu kuvatakse käsureale (kui just programm on sinnamaani jõudnud).
+                // ";" koodirea lõpeta lauselõpumärgiga
+
             }
+            // "}" loogiline sulg tähistab koodi ploki konteineri lõppu
+
+
+
+
 
             /*4. töökoht*/
             //küsi kasutajalt kas ta töötab

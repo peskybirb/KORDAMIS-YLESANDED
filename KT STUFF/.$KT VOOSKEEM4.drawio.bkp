@@ -1,0 +1,164 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Leht-1" id="cLJs1a86NS6knrbk9sRk">
+    <mxGraphModel dx="519" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RSk5shlYJy09beS5fma_-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-1" target="RSk5shlYJy09beS5fma_-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-1" value="ALGUS" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="354" y="30" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-2" target="RSk5shlYJy09beS5fma_-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-2" value="Tekitame täisarvulise muutuja &quot;Skoor&quot; ning omandame sellesse algväärtuse &quot;0&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="316" y="130" width="196" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-4" target="RSk5shlYJy09beS5fma_-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-4" value="Kuvamekasutajale teksti &quot;Mis oli sinu viimatine Jalkpalli tulemus (täisarvuna)&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" vertex="1" parent="1">
+          <mxGeometry x="321" y="220" width="184" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-6" target="RSk5shlYJy09beS5fma_-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-6" value="Ootame kuni kasutja sisestab oma tulemuse käsureale ja omastame selle muutujasse &quot;Skoor&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="329.5" y="310" width="167" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-8" target="RSk5shlYJy09beS5fma_-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-12" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSk5shlYJy09beS5fma_-11">
+          <mxGeometry x="-0.2888" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-8" target="RSk5shlYJy09beS5fma_-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-18" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSk5shlYJy09beS5fma_-14">
+          <mxGeometry x="-0.3057" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-8" value="Kasu muutujas Skoor väärtus on &quot;0&quot; ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e6d0de;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+          <mxGeometry x="348" y="430" width="130" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-10" target="RSk5shlYJy09beS5fma_-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="735" y="485" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-10" value="Kuvame kasutajale teksti &quot;PUDRUJALG OLED VA?!?!&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="530" y="447.5" width="170" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-13" target="RSk5shlYJy09beS5fma_-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-17" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSk5shlYJy09beS5fma_-16">
+          <mxGeometry x="-0.3724" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-13" target="RSk5shlYJy09beS5fma_-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-29" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSk5shlYJy09beS5fma_-23">
+          <mxGeometry x="-0.6076" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-13" value="Kasu muutujas Skoor väärtus on &quot;1&quot; ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e6d0de;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+          <mxGeometry x="349" y="570" width="130" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-15" target="RSk5shlYJy09beS5fma_-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="735" y="625" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-15" value="Kuvame kasutajale teksti &quot;täitsa ok&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="530" y="587.5" width="170" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="RSk5shlYJy09beS5fma_-21" target="RSk5shlYJy09beS5fma_-22" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-20" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSk5shlYJy09beS5fma_-19">
+          <mxGeometry x="-0.3724" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-21" target="RSk5shlYJy09beS5fma_-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-30" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSk5shlYJy09beS5fma_-28">
+          <mxGeometry x="-0.5515" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-21" value="Kasu muutujas Skoor väärtus on &quot;2&quot; ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e6d0de;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+          <mxGeometry x="349" y="710" width="130" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-22" target="RSk5shlYJy09beS5fma_-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="735" y="765" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-22" value="Kuvame kasutajale teksti &quot;no see juba on parem&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="530" y="727.5" width="170" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="RSk5shlYJy09beS5fma_-26" target="RSk5shlYJy09beS5fma_-27" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-25" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSk5shlYJy09beS5fma_-24">
+          <mxGeometry x="-0.3724" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-26" target="RSk5shlYJy09beS5fma_-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-34" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="RSk5shlYJy09beS5fma_-33">
+          <mxGeometry x="-0.2427" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-26" value="Kasu muutujas Skoor väärtus on &quot;3&quot; ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e6d0de;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+          <mxGeometry x="348" y="850" width="130" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-27" target="RSk5shlYJy09beS5fma_-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="735" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-27" value="Kuvame kasutajale teksti &quot;wow messi&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="530" y="867.5" width="170" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="RSk5shlYJy09beS5fma_-32" target="RSk5shlYJy09beS5fma_-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="414" y="1108" />
+              <mxPoint x="575" y="1108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-32" value="Kuvame kasutajale teksti &quot;Ei&amp;nbsp; tunne sellist skoori, see liiga suur minu jaoks&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="329" y="1000" width="170" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="RSk5shlYJy09beS5fma_-35" value="LÕPP" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1060" width="170" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,81 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Leht-1" id="xIDLVshADCI1EbFGtk_m">
+    <mxGraphModel dx="519" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="X4aHNLJCR274JPDncicV-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X4aHNLJCR274JPDncicV-1" target="X4aHNLJCR274JPDncicV-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-1" value="ALGUS" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="320" y="120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X4aHNLJCR274JPDncicV-2" target="X4aHNLJCR274JPDncicV-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-2" value="Tekitame sõne tüüpi&amp;nbsp; muutuja &quot;Vastus&quot; mille jätame hetkel tühjaks&amp;nbsp;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="300" y="220" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X4aHNLJCR274JPDncicV-4" target="X4aHNLJCR274JPDncicV-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-4" value="Kuvame kasutajale teksti &quot;Kas sulle meeldivad tulbid ?&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;gradientColor=#ea6b66;" parent="1" vertex="1">
+          <mxGeometry x="300" y="310" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X4aHNLJCR274JPDncicV-6" target="X4aHNLJCR274JPDncicV-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-6" value="Ootame kuni kasutaja sisestab käsureale oma vastuse ja omistame selle muutujasse &quot;Vastus&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="305" y="400" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X4aHNLJCR274JPDncicV-8" target="X4aHNLJCR274JPDncicV-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-15" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X4aHNLJCR274JPDncicV-11" vertex="1" connectable="0">
+          <mxGeometry x="-0.46" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-8" value="Kas muutujas &quot;Vastus&quot; on sõne tüüpi andmed &quot;jah&quot; ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e6d0de;gradientColor=#d5739d;strokeColor=#996185;" parent="1" vertex="1">
+          <mxGeometry x="315" y="480" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="X4aHNLJCR274JPDncicV-10" target="X4aHNLJCR274JPDncicV-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-10" value="Kuva kasutajale tekst &quot;Mulle kaaa&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="320" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="X4aHNLJCR274JPDncicV-12" target="X4aHNLJCR274JPDncicV-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-12" value="Kuva kasutajale tekst &quot;ei saa sinust aru&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="455" y="610" width="125" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X4aHNLJCR274JPDncicV-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="525" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-14" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X4aHNLJCR274JPDncicV-13" vertex="1" connectable="0">
+          <mxGeometry x="-0.7106" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X4aHNLJCR274JPDncicV-16" value="LÕPP" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="380" y="750" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

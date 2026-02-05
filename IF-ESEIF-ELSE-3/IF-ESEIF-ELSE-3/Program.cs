@@ -27,7 +27,7 @@
             //kui suunakood on väiksem kui 5 tähte, ütle talle, 1 täht on puudu
             //kui suunakood on suurem kui 5 tähte, ütle talle, 1 täht on üle
             //kui suunakoodis on 5 tähte, ütle "ahha nüüd tean kus elad"
-
+            /*
 
             // võib natukene erineda kuna võtsin programmi oma repost
 
@@ -120,7 +120,7 @@
 
             }
             // "}" loogiline sulg tähistab koodi ploki konteineri lõppu
-
+            */
 
 
 
@@ -140,6 +140,37 @@
             //  kui 2FA kood on pikem kui 6 tähte, ütle sissepääs keelatud, kood on liiga pikk
             //  kui 2FA kood on 6 tähte, siis lase sisse, öeldes "oled sissepääsenud"
             //NB: 2FA kood ei pea matchima eksisteeriva näitega nagu parool.
+
+            string Parool = "";
+            string TFA = "";
+
+            Console.WriteLine("Mis on su parool?");
+            Parool = Console.ReadLine();
+
+            Console.WriteLine("Mis on sinu 2FA kood");
+            TFA = Console.ReadLine();
+
+            if(Parool == "V4G47UG3VPAR00L")
+            {
+                if (TFA.Length < 6)
+                {
+                    Console.WriteLine("2FA pikkus on liiga lühike");
+                }
+                else if (TFA.Length > 6)
+                {
+                    Console.WriteLine("2FA pikkus on liiga pikk");
+                }
+                else
+                {
+                    Console.WriteLine("Olete edukalt sisseloginud");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Sissepääs keelatud");
+            }
+
         }
     }
 }

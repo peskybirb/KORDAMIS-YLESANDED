@@ -1,0 +1,131 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Leht-1" id="5hYO_4MT-ADl1k09qWgl">
+    <mxGraphModel dx="1120" dy="1703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-1" target="-XHsTvzU38pZ6PzSQVYo-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-1" value="ALGUS" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9B94FC;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="354" y="10" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-4" target="-XHsTvzU38pZ6PzSQVYo-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-4" value="Kuvame kasutajale teksti &quot;Mis on teie 2FA kood ?&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="329" y="530" width="169" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-7" target="-XHsTvzU38pZ6PzSQVYo-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-7" value="Kuvame kasutajale teksti &quot;Mis on teie parool ?&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="329" y="330" width="169" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-10" target="-XHsTvzU38pZ6PzSQVYo-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-10" value="Tekitame Sõne tüüpi muutuja &quot;Parool&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="329.5" y="120" width="169" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-12" target="-XHsTvzU38pZ6PzSQVYo-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-12" value="Tekitame Sõne tüüpi muutuja &quot;TFA&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="329" y="230" width="169" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-16" target="-XHsTvzU38pZ6PzSQVYo-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-16" value="Ootme kuni kasutaja sisestab oma parooli ning omastame selle muutujasse &quot;Parool&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#66FF66;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="339" y="430" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-19" target="-XHsTvzU38pZ6PzSQVYo-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-19" value="Ootme kuni kasutaja sisestab oma 2FA koodi ning omastame selle muutujasse &quot;TFA&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#66FF66;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="339" y="630" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-22" target="-XHsTvzU38pZ6PzSQVYo-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-27" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-XHsTvzU38pZ6PzSQVYo-26">
+          <mxGeometry x="-0.4092" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-22" target="-XHsTvzU38pZ6PzSQVYo-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-42" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-XHsTvzU38pZ6PzSQVYo-30">
+          <mxGeometry x="-0.6343" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-22" value="Kas muutujas &quot;Parool&quot; on sõne tüüpi andmed &quot;V4G47UG3VPAR00L&quot;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E65EBD;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+          <mxGeometry x="327" y="720" width="174" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-25" target="-XHsTvzU38pZ6PzSQVYo-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-25" value="Kuvame kasutajale teksti &quot;Sissepääs keelatud&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="550" y="745" width="169" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-29" target="-XHsTvzU38pZ6PzSQVYo-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-43" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-XHsTvzU38pZ6PzSQVYo-32">
+          <mxGeometry x="-0.6415" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-29" target="-XHsTvzU38pZ6PzSQVYo-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-40" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-XHsTvzU38pZ6PzSQVYo-38">
+          <mxGeometry x="-0.1671" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-29" value="Kas muutujas &quot;TFA&quot; sõne tüüpi andmete pikkus on alla &quot;6&quot; märgi pikk&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E65EBD;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+          <mxGeometry x="327" y="880" width="174" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-31" target="-XHsTvzU38pZ6PzSQVYo-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-41" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-XHsTvzU38pZ6PzSQVYo-37">
+          <mxGeometry x="-0.2155" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-31" target="-XHsTvzU38pZ6PzSQVYo-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-31" value="Kas muutujas &quot;TFA&quot;&amp;nbsp;sõne tüüpi andmete pikkus on üle &quot;6&quot; märgi pikk&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E65EBD;gradientColor=#d5739d;strokeColor=#996185;" vertex="1" parent="1">
+          <mxGeometry x="327" y="1039" width="174" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-35" target="-XHsTvzU38pZ6PzSQVYo-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-35" value="Kuvame kasutajale teksti &quot;Sissepääs keelatud&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="550" y="905" width="169" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-36" target="-XHsTvzU38pZ6PzSQVYo-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-36" value="Kuvame kasutajale teksti &quot;Sissepääs keelatud&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1064" width="169" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-45" value="LÕPP" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1210" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-46" target="-XHsTvzU38pZ6PzSQVYo-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-46" value="Kuvame kasutajale teksti &quot;Oled edukalt sisse loginud&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="329.5" y="1210" width="169" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

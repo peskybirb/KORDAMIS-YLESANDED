@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
   <diagram name="Leht-1" id="5hYO_4MT-ADl1k09qWgl">
-    <mxGraphModel dx="1120" dy="1703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="373" dy="568" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -107,13 +107,13 @@
         <mxCell id="-XHsTvzU38pZ6PzSQVYo-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-35" target="-XHsTvzU38pZ6PzSQVYo-45">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-XHsTvzU38pZ6PzSQVYo-35" value="Kuvame kasutajale teksti &quot;Sissepääs keelatud&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-35" value="Kuvame kasutajale teksti &quot;2FA pikkus on liiga lühike&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="550" y="905" width="169" height="80" as="geometry" />
         </mxCell>
         <mxCell id="-XHsTvzU38pZ6PzSQVYo-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XHsTvzU38pZ6PzSQVYo-36" target="-XHsTvzU38pZ6PzSQVYo-45">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-XHsTvzU38pZ6PzSQVYo-36" value="Kuvame kasutajale teksti &quot;Sissepääs keelatud&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
+        <mxCell id="-XHsTvzU38pZ6PzSQVYo-36" value="Kuvame kasutajale teksti &quot;2FA pikkus liiga pikk&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F82C33;gradientColor=#ea6b66;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="550" y="1064" width="169" height="80" as="geometry" />
         </mxCell>
         <mxCell id="-XHsTvzU38pZ6PzSQVYo-45" value="LÕPP" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="1">

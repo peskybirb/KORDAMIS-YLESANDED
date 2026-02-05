@@ -11,6 +11,28 @@
             //kui ta on lühem kui 2m, ütle tavaline kolge
             //kui ta on pikem kui 2m, ütle hiiglane
 
+            Decimal Pikkus = 0;
+            Console.WriteLine("palun sisesta oma pikkus (sentimeetrites)");
+            Pikkus = Decimal.Parse(Console.ReadLine());
+
+            if (Pikkus <= 0)
+            {
+                Console.WriteLine("Madalam kui muru");
+            }
+            else if (Pikkus >= 1 && Pikkus < 100)
+            {
+                Console.WriteLine("Juntsu");
+            }
+            else if (Pikkus >= 101 && Pikkus < 200)
+            {
+                Console.WriteLine("Tavaline kolge");
+            }
+            else
+            {
+                Console.WriteLine("Hiiglane");
+            }
+
+
             /*2. sõnum noorukile*/
             //küsi kasutajalt kui vana ta on
             //küsi kasutajalt praegust aastaarvu
@@ -21,6 +43,9 @@
             //    kui jah, ütle tubli
             //    kui ei, ütle kahju
             //kui kasutaja on sündinud enne 2010, küsi mitu rage comicsit ta täna oma redditi lugemise ajal leidis 
+
+
+
 
             /*3. suunakoodituvasti*/
             //küsi kasutajalt tema elukoha suunakoodi
@@ -130,6 +155,8 @@
             //kui kasutaja vastab jah, siis ütle tubli
             //kui kasutaja vastab ei, siis ütle, kahju, miks sa siis töökohta ei otsi?
             //kui kasutaja vastab otsin, siis ütle, loodan et saad varsti tööle c:
+
+
 
             /*5. 2FA autentija */
             //küsi kasutajalt tema parooli

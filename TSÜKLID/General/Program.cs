@@ -16,6 +16,36 @@
             // - - küsitakse uuesti tühja sisendi korral
             // - ning väljastab talle tervituslause, kasutades kõiki muutujaid
 
+            string Eesnimi = string.Empty;            
+            string Keskminenimi = string.Empty;          
+            string PerekonnaNimi = string.Empty;            
+            int Vanus = 0;
+
+            while (Eesnimi == string.Empty)
+            {
+                Console.WriteLine("Palun sisesta oma eesnimi");
+                Eesnimi = Console.ReadLine();
+            } 
+            while (!(Keskminenimi != string.Empty))
+            {
+                Console.WriteLine("Palun sisesta oma keskminenimi");
+                Keskminenimi = Console.ReadLine();
+            }            
+            while (PerekonnaNimi == string.Empty)
+            {
+                Console.WriteLine("Palun sisesta oma perekonnanimi");
+                PerekonnaNimi = Console.ReadLine();
+            }
+            while(Vanus < 1)
+            {
+                // tühi vanus ei saa olla 
+                Console.WriteLine("Palun sisesta oma vanus");
+                Vanus = int.Parse(Console.ReadLine());
+
+            }
+            Console.WriteLine($"Tere päevast {Eesnimi} {PerekonnaNimi} või kutsun sind {Keskminenimi} oled ilusti kasvanud, oled juba {Vanus} astat vana");
+
+
             // #n2. "Minu lemmiksnäkk"
             // kirjuta programm mis
             // küsib kasutajalt mis on ta lemmiksnäkk

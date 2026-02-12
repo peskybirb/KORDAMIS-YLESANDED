@@ -4,110 +4,250 @@
     {
         static void Main(string[] args)
         {
-            // #n1. "Tervitus"
-            // kirjuta programm mis,
-            // - küsib tsükliga kasutajalt tema eesnime
-            // - - küsitakse uuesti tühja sisendi korral
-            // - küsib kasutajalt tema keskmist nime
-            // - - küsitakse uuesti tühja sisendi korral
-            // - küsib kasutajalt tema perekonnanime
-            // - - küsitakse uuesti tühja sisendi korral
-            // - tema vanust
-            // - - küsitakse uuesti tühja sisendi korral
-            // - ning väljastab talle tervituslause, kasutades kõiki muutujaid
-            /*
-            string Eesnimi = string.Empty;            
-            string Keskminenimi = string.Empty;          
-            string PerekonnaNimi = string.Empty;            
-            int Vanus = 0;
+        // #n1. "Tervitus"
+        // kirjuta programm mis,
+        // - küsib tsükliga kasutajalt tema eesnime
+        // - - küsitakse uuesti tühja sisendi korral
+        // - küsib kasutajalt tema keskmist nime
+        // - - küsitakse uuesti tühja sisendi korral
+        // - küsib kasutajalt tema perekonnanime
+        // - - küsitakse uuesti tühja sisendi korral
+        // - tema vanust
+        // - - küsitakse uuesti tühja sisendi korral
+        // - ning väljastab talle tervituslause, kasutades kõiki muutujaid
+        /*
+        string Eesnimi = string.Empty;            
+        string Keskminenimi = string.Empty;          
+        string PerekonnaNimi = string.Empty;            
+        int Vanus = 0;
 
-            while (Eesnimi == string.Empty)
+        while (Eesnimi == string.Empty)
+        {
+            Console.WriteLine("Palun sisesta oma eesnimi");
+            Eesnimi = Console.ReadLine();
+        } 
+        while (!(Keskminenimi != string.Empty))
+        {
+            Console.WriteLine("Palun sisesta oma keskminenimi");
+            Keskminenimi = Console.ReadLine();
+        }            
+        while (PerekonnaNimi == string.Empty)
+        {
+            Console.WriteLine("Palun sisesta oma perekonnanimi");
+            PerekonnaNimi = Console.ReadLine();
+        }
+        while(Vanus < 1)
+        {
+            // tühi vanus ei saa olla 
+            Console.WriteLine("Palun sisesta oma vanus");
+            Vanus = int.Parse(Console.ReadLine());
+
+        }
+        Console.WriteLine($"Tere päevast {Eesnimi} {PerekonnaNimi} või kutsun sind {Keskminenimi} oled ilusti kasvanud, oled juba {Vanus} astat vana");
+        */
+
+        // #n2. "Minu lemmiksnäkk"
+        // kirjuta programm mis
+        // küsib kasutajalt mis on ta lemmiksnäkk
+        // programm kontrollib tsükliga kas järjendis on snäkk olemas
+        // kui tsüklis leitakse snäkk, kuva tekst koos kasutajasisendiga, "jaa :D tean seda, {snäkk} on hea"
+        // kui tsükkel lõppeb ilma snäkki leidmata, kuva tekst "ei tunne kahjuks {snäkk}i :C"
+        /*
+        List<string> list = new List<string>()
+        {
+            "KitKat",
+            "õun",
+            "pocky",
+            "Twix",
+            "bounty",
+            "banaan",
+            "Mars",
+            "kõrpsud",
+            "juust",
+            "saiake"
+        };
+
+        string kasutajaleMeeldib = string.Empty;
+
+        bool isPresent = false;
+
+        while (isPresent != true)
+        {
+            // küsime kasutajalt
+            Console.WriteLine("Sisesta oma lemmik snäkk");
+            kasutajaleMeeldib = Console.ReadLine();
+
+            //kontrollime kas listis on snäkk
+            foreach (var snäkk in list)
             {
-                Console.WriteLine("Palun sisesta oma eesnimi");
-                Eesnimi = Console.ReadLine();
-            } 
-            while (!(Keskminenimi != string.Empty))
-            {
-                Console.WriteLine("Palun sisesta oma keskminenimi");
-                Keskminenimi = Console.ReadLine();
-            }            
-            while (PerekonnaNimi == string.Empty)
-            {
-                Console.WriteLine("Palun sisesta oma perekonnanimi");
-                PerekonnaNimi = Console.ReadLine();
+                if (snäkk == kasutajaleMeeldib)
+                {
+                    isPresent = true;
+                }
             }
-            while(Vanus < 1)
+            if (isPresent == true)
             {
-                // tühi vanus ei saa olla 
-                Console.WriteLine("Palun sisesta oma vanus");
-                Vanus = int.Parse(Console.ReadLine());
-
+                Console.WriteLine($"jaa, tean seda ,{kasutajaleMeeldib} on hea");
             }
-            Console.WriteLine($"Tere päevast {Eesnimi} {PerekonnaNimi} või kutsun sind {Keskminenimi} oled ilusti kasvanud, oled juba {Vanus} astat vana");
-            */
-
-            // #n2. "Minu lemmiksnäkk"
-            // kirjuta programm mis
-            // küsib kasutajalt mis on ta lemmiksnäkk
-            // programm kontrollib tsükliga kas järjendis on snäkk olemas
-            // kui tsüklis leitakse snäkk, kuva tekst koos kasutajasisendiga, "jaa :D tean seda, {snäkk} on hea"
-            // kui tsükkel lõppeb ilma snäkki leidmata, kuva tekst "ei tunne kahjuks {snäkk}i :C"
-
-            List<string> list = new List<string>()
+            else
             {
-                "KitKat",
-                "õun",
-                "pocky",
-                "Twix",
-                "bounty",
-                "banaan",
-                "Mars",
-                "kõrpsud",
-                "juust",
-                "saiake"
+                Console.WriteLine("Kahjuks ei tea seda snäkki :<");
+            }
+        }
+        */
+
+        // #n3. "Metsataimede välimääraja"
+        // kirjuta programm mis
+        // küsib kasutajalt kas ta otsib mingit seent või marja (tsüklis)
+        // kui seent, siis programm esitab seeneloendis olevad seened
+        // ja küsib millise seene kohta infot infojärjendist kuvada
+        // tsükkel siis käib ja otsib teisest järjendis seene infot ja kuvab selle
+        // kui marja, siis programm esitab marjaloendis olevad marja
+        // ja küsib millise marja kohta infot infojärjendist kuvada
+        // tsükkel siis käib ja otsib teisest järjendis marja infot ja kuvab selle
+        // siis küsitakse kas kasutaja tahab mõne marja kohta veel infot, ning tsükkel jätkub
+        // ⭐iseseisvalt lisa juurde puude tuvastamine ⭐
+        ALGUS:
+            Console.Clear();
+            bool another = true;
+            string mida = string.Empty;
+            List<string> Valikud = new List<string>() { "seent", "marja","puud"};
+            List<string> seened = new List<string>
+
+            {"puravik" ,
+             "kukeseen",
+             "kärbseseen"
             };
 
-            string kasutajaleMeeldib = string.Empty;
+            List<string> seeneInfo = new List<string>
 
-            bool isPresent = false;
+            {"puravik on pealt proon maitseb normilt" ,
+             "kukeseen kollane maitseb veelgi paremini kui puravik",
+             "kärbseseen parim seen listis punane valgete täppidega ja vägagi maitsev , olemas on ka roheline ja valge aga parmn neist siiski maitse poolest on valge"
+            };
 
-            while (isPresent != true)
+            List<string> marjad = new List<string>
+
+            {"maasikas" ,
+             "mustikas",
+             "astelpaju"
+            };
+
+            List<string> marjaInfo = new List<string>
+
+            {"Maasikas on punane magus mari " ,
+             "mustikas on tume sisine magus ümmargune mari",
+             "astelpaju on kollane maitseb nagu apelsiin"
+            };
+
+            List<string> puud = new List<string>
+
+            {"kask" ,
+             "mänd",
+             "kuusk"
+            };
+
+            List<string> puuInfo = new List<string>
+
+            {"kask on hele puu " ,
+             "mänd on pikk mda",
+             "kuusk on okkaline ai ai"
+            };
+            while (another == true)
             {
-                // küsime kasutajalt
-                Console.WriteLine("Sisesta oma lemmik snäkk");
-                kasutajaleMeeldib = Console.ReadLine();
 
-                //kontrollime kas listis on snäkk
-                foreach (var snäkk in list)
+
+                do
                 {
-                    if (snäkk == kasutajaleMeeldib)
-                    {
-                        isPresent = true;
-                    }
+                    Console.WriteLine("kas otsid seent , marja või puud ?");
+                    mida = Console.ReadLine();
                 }
-                if (isPresent == true)
+                //while (!new List<string>() {"seent","marja"}.Contains(mida));
+                while (!Valikud.Contains(mida));
+
+                if (mida == "seent")
                 {
-                    Console.WriteLine($"jaa, tean seda ,{kasutajaleMeeldib} on hea");
+                    List<int> seeneValikud = new List<int>() { 1, 2, 3 };
+                    int seenearv = 0;
+                    do
+                    {
+                        Console.WriteLine("palun vali seen mille infot soovid , valikus on" + seened.Count + " tükki");
+                        for (int i = 0; i < seened.Count; i++)
+                        {
+                            Console.WriteLine((i + 1) + ". " + seened.ElementAt(i));
+                        }
+                        seenearv = int.Parse(Console.ReadLine());
+                    }
+                    while (!seeneValikud.Contains(seenearv));
+
+                    Console.WriteLine(seeneInfo.ElementAt(seenearv - 1));
+                }
+                else if (mida == "marja")
+                {
+                    List<int> MarjaValikud = new List<int>() { 1, 2, 3 };
+                    int marjaarv = 0;
+                    do
+                    {
+                        Console.WriteLine("palun vali seen mille infot soovid , valikus on" + seened.Count + " tükki");
+                        for (int i = 0; i < marjad.Count; i++)
+                        {
+                            Console.WriteLine((i + 1) + ". " + marjad.ElementAt(i));
+                        }
+                        marjaarv = int.Parse(Console.ReadLine());
+                    }
+                    while (!MarjaValikud.Contains(marjaarv));
+
+                    Console.WriteLine(marjaInfo.ElementAt(marjaarv - 1));
+                }
+
+                else
+                {
+                    List<int> puuValikud = new List<int>() { 1, 2, 3 };
+                    int puuarv = 0;
+                    do
+                    {
+                        Console.WriteLine("palun vali seen mille infot soovid , valikus on" + puud.Count + " tükki");
+                        for (int i = 0; i < puud.Count; i++)
+                        {
+                            Console.WriteLine((i + 1) + ". " + puud.ElementAt(i));
+                        }
+                        puuarv = int.Parse(Console.ReadLine());
+                    }
+                    while (!puuValikud.Contains(puuarv));
+
+                    Console.WriteLine(puuInfo.ElementAt(puuarv - 1));
+
+                }
+                string valikk = string.Empty;
+                Console.WriteLine("kas soovid veel infot ? jah/ei");
+                valikk = Console.ReadLine();
+                if (valikk == "jah")
+                {
+                    goto ALGUS;
                 }
                 else
                 {
-                    Console.WriteLine("Kahjuks ei tea seda snäkki");
+                    Environment.Exit(0);
                 }
+
+                /*
+                string kasutajaOtsus = "";
+                do
+                {
+
+                }
+                while ((kasutajaOtsus != "jah" && kasutajaOtsus != "ei"));
+                if (kasutajaOtsus == "jah")
+                {
+                    another = true;
+                }
+                else
+                {
+                    another = false; 
+                }
+                */
+
             }
-
-
-            // #n3. "Metsataimede välimääraja"
-            // kirjuta programm mis
-            // küsib kasutajalt kas ta otsib mingit seent või marja (tsüklis)
-            // kui seent, siis programm esitab seeneloendis olevad seened
-            // ja küsib millise seene kohta infot infojärjendist kuvada
-            // tsükkel siis käib ja otsib teisest järjendis seene infot ja kuvab selle
-            // kui marja, siis programm esitab marjaloendis olevad marja
-            // ja küsib millise marja kohta infot infojärjendist kuvada
-            // tsükkel siis käib ja otsib teisest järjendis marja infot ja kuvab selle
-            // siis küsitakse kas kasutaja tahab mõne marja kohta veel infot, ning tsükkel jätkub
-            // ⭐iseseisvalt lisa juurde puude tuvastamine ⭐
-
             // #n4. "Stonksid"
             // kirjuta programm mis töötab tsüklis ja omab tehtavat koodi mis:
             // küsib kasutajalt temapoolse investeeritava summa

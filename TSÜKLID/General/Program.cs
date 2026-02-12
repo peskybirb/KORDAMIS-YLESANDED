@@ -15,7 +15,7 @@
             // - tema vanust
             // - - küsitakse uuesti tühja sisendi korral
             // - ning väljastab talle tervituslause, kasutades kõiki muutujaid
-
+            /*
             string Eesnimi = string.Empty;            
             string Keskminenimi = string.Empty;          
             string PerekonnaNimi = string.Empty;            
@@ -44,7 +44,7 @@
 
             }
             Console.WriteLine($"Tere päevast {Eesnimi} {PerekonnaNimi} või kutsun sind {Keskminenimi} oled ilusti kasvanud, oled juba {Vanus} astat vana");
-
+            */
 
             // #n2. "Minu lemmiksnäkk"
             // kirjuta programm mis
@@ -52,6 +52,49 @@
             // programm kontrollib tsükliga kas järjendis on snäkk olemas
             // kui tsüklis leitakse snäkk, kuva tekst koos kasutajasisendiga, "jaa :D tean seda, {snäkk} on hea"
             // kui tsükkel lõppeb ilma snäkki leidmata, kuva tekst "ei tunne kahjuks {snäkk}i :C"
+
+            List<string> list = new List<string>()
+            {
+                "KitKat",
+                "õun",
+                "pocky",
+                "Twix",
+                "bounty",
+                "banaan",
+                "Mars",
+                "kõrpsud",
+                "juust",
+                "saiake"
+            };
+
+            string kasutajaleMeeldib = string.Empty;
+
+            bool isPresent = false;
+
+            while (isPresent != true)
+            {
+                // küsime kasutajalt
+                Console.WriteLine("Sisesta oma lemmik snäkk");
+                kasutajaleMeeldib = Console.ReadLine();
+
+                //kontrollime kas listis on snäkk
+                foreach (var snäkk in list)
+                {
+                    if (snäkk == kasutajaleMeeldib)
+                    {
+                        isPresent = true;
+                    }
+                }
+                if (isPresent == true)
+                {
+                    Console.WriteLine($"jaa, tean seda ,{kasutajaleMeeldib} on hea");
+                }
+                else
+                {
+                    Console.WriteLine("Kahjuks ei tea seda snäkki");
+                }
+            }
+
 
             // #n3. "Metsataimede välimääraja"
             // kirjuta programm mis

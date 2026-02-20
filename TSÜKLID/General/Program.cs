@@ -1,4 +1,6 @@
-﻿namespace General
+﻿using System.Linq.Expressions;
+
+namespace General
 {
     internal class Program
     {
@@ -274,7 +276,7 @@
 
             // äge oleks ka kui oleks kaasa käiv menüü mis trackib sisestatud andmeid ja toob need puhtalt kaasa näidates
             // seda kasutajale
-
+            /*
             List<string> Firmad = new List<string>() { "Tesla", "TransferWise", "MicroSlop" };
 
             do
@@ -377,6 +379,247 @@
             }
 
             while (true);
+            */
+
+            //stonks proov 2
+
+            /*
+            float teslarate = -1.15f;
+            float mrate = 0f;
+            float Wiserate = 0f;
+            string reinvest = "ei";
+            Random generator = new Random();
+
+            while (true)
+            {
+                float investment = 0.0f;
+                do 
+                {
+                    Console.WriteLine("Palun sisesta summa mida soovid investeerida");
+                    investment = float.Parse(Console.ReadLine());
+                } while (investment <= 0);
+
+                List<string> firmad = new List<string>() {"Tesla", "TransferWise", "MicroSlop" } ;
+                string useroption = "";
+                do
+                {
+                    Console.WriteLine("Mis firmasse soovid investeerida ?kirjuta firma nimi");
+                    foreach (var firma in firmad)
+                    {
+                        Console.WriteLine(" - " + firma);
+                    }
+                    useroption = Console.ReadLine();
+                }
+                while (firmad.Contains(useroption));
+                
+                int investmentdays = 0;
+                do
+                {
+                    Console.WriteLine("palun sisest kui kauaks soovid investeerida");
+                    investmentdays = int.Parse(Console.ReadLine());
+                } while (investmentdays < 0);
+                int i = 0;
+                float cyclerate = 0f;
+                while (i > 0);
+                {
+                    int fixture = generator.Next(1, 100);
+                    float result = (float)(fixture / 1000) + 1;
+                    Wiserate = result;
+                    mrate = (result - result * 2);
+
+                    switch (useroption)
+                    {
+                        case "Tesla":
+                            cyclerate = teslarate;
+                            if (investment < 0)
+                            {
+                                investment = (investment - investment *2);
+                            }
+                            break;
+
+
+                        case "TransferWise":
+                            cyclerate = Wiserate;
+                            if (investment < 0)
+                            {
+                                investment = (investment - investment * 2);
+                            }
+                            break;
+
+
+                        case "Microslop":
+                            cyclerate = mrate;
+                            break;
+
+
+                        default:
+                            break;
+                    }
+                            Console.WriteLine(i+1+". päeva tulemus: firma - "+useroption+"aktsia muutus kordajaga "+cyclerate);
+                    i++;
+                    }
+
+                    if (investment > 0)
+                    {
+                    Console.WriteLine("kas soovid veel investeerida ?");
+                    }
+
+                    else
+                    {
+                    Console.WriteLine("oled pankrotis");
+                    }
+
+
+                Console.WriteLine("Sinu portfell on miinuses"+investment);
+                reinvest = "ei";
+                }
+            
+            */
+            
+
+
+            // my code baisically works 
+
+
+            
+            var VEEL = true;
+
+            do
+            {
+
+                double investeering = 0;
+                int paevad = 0;
+                string valik = string.Empty;
+                double Vahesumma = 0;
+
+                List<string> firmad = new List<string>() { "Tesla", "TransferWise", "MicroSlop" };
+
+                //kusime palju kasutaja soovib investeerida.
+                Console.WriteLine("Kui palju soovite investeerida ?");
+                investeering = double.Parse(Console.ReadLine());
+
+                // natukene puhtamaks ekraan 
+                Console.Clear();
+                Console.WriteLine("Teie valitud investeering: " + investeering + " Eurot");
+                Console.WriteLine();
+
+                //kusime mitu paeva soovib kasutaja investeerida.
+                Console.WriteLine("Kui kaukas soovite investeerida ?");
+                paevad = int.Parse(Console.ReadLine());
+
+                Console.Clear();
+                Console.WriteLine("Teie valitud investeering: " + investeering + " Eurot");
+                Console.WriteLine("Investeeringu periood: " + paevad + " päeva");
+                Console.WriteLine();
+
+
+                //küsime millist kasutaja tahab valida 
+                Console.WriteLine("Kuhu soovite investeerida ?");
+
+                for (int i = 0; i < firmad.Count; i++)
+                {
+                    Console.WriteLine((i + 1) + ". " + firmad[i]);
+                }
+
+                valik = Console.ReadLine();
+
+                Console.Clear();
+                Console.WriteLine("Teie valitud investeering: " + investeering + " Eurot");
+                Console.WriteLine("Investeeringu periood: " + paevad + " päeva");
+                Console.WriteLine("Investeeritud firma: " + firmad[int.Parse(valik) - 1]);
+                Console.WriteLine();
+
+                if (valik == "1")
+                {
+
+                    //Valik kui kasutaja valib tesla
+
+                    for (int t = 0; t < paevad; t++)
+                    {
+                        Vahesumma = investeering * -1.15;
+                        investeering = Vahesumma;
+                        Vahesumma = Math.Round(Vahesumma, 2);
+                        Console.WriteLine(firmad[0] + ". " + "hetke summa: " + Vahesumma + " Kordaja: " + "-1.15");
+
+                        if (Vahesumma <= 0)
+                        {
+
+                            Console.WriteLine("Lopp summa " + Vahesumma + " Eurot");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Kas soovite veel inesteerida ?");
+                        }
+
+                    }
+
+                }
+                else if (valik == "2")
+                {
+                    for (int t = 0; t < paevad; t++)
+                    {
+                        Random rnd = new Random();
+                        int num1 = rnd.Next(1, 101); // random number 1 - 100
+                        Vahesumma = (num1 / 1000.0) + 1; //random valemi gen
+                        investeering = investeering * Vahesumma;
+
+                        Console.WriteLine("Valitud firma: " + firmad[1] + " Hetkeseis: " + Math.Round(investeering, 2) + " Eurot kordaja: " + Vahesumma);
+                    }
+                    if (investeering < 0)
+                    {
+                        Console.WriteLine("oled pankrotis");
+                    }
+                    //lisada look back tagasi algusesse
+
+                }
+                else if (valik == "3")
+                {
+
+                    for (int t = 0; t < paevad; t++)
+                    {
+                        Random rnd = new Random();
+                        int num1 = rnd.Next(-100, 0); // random number -1 kuni -100
+                        Vahesumma = (num1 / 1000.0) + 1; //random valemi gen
+                        investeering = investeering * Vahesumma;
+
+                        Console.WriteLine("Valitud firma: " + firmad[2] + " Hetkeseis: " + Math.Round(investeering, 2) + " Eurot kordaja: " + Vahesumma);
+                    }
+                    if (Math.Round(investeering) <= 0.01)
+                    {
+                        Console.WriteLine("oled pankrotis");
+                        break;
+                    }
+
+                }
+
+                if (Vahesumma <= 0)
+                {
+                    Console.WriteLine("oled pankrotis");
+                }
+                else
+                {
+                    Console.WriteLine("Loppsumma on " + Math.Round(investeering, 2));
+                }
+                Console.WriteLine();
+                Console.WriteLine("Kas sooite veel investeerida ?(ei/JAH)");
+                string valik2 = string.Empty;
+                valik2 = Console.ReadLine();
+                if (valik2 == "ei")
+                {
+                    VEEL = false;
+                }
+                else
+                {
+                    Console.Clear();
+                }
+            
+            }while (VEEL == true);
+            
+
+
+            }
         }
+            
     }
-}
+

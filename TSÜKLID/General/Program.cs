@@ -605,6 +605,7 @@ namespace General
                 Console.WriteLine("Kas sooite veel investeerida ?(ei/JAH)");
                 string valik2 = string.Empty;
                 valik2 = Console.ReadLine();
+
                 if (valik2 == "ei")
                 {
                     VEEL = false;

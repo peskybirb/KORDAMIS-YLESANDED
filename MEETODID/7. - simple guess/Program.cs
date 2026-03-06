@@ -11,13 +11,17 @@ namespace _7.___simple_guess
         
         static void Main(string[] args)
         {
+            //add bleeding with bool that remember if u are or are not bleeding adds a even that removes bleeding
 
             //kodune ülesanne raha muutuja ja 3 eventi mis muudavad raha seisu 
             int pokeBalls = 3;
             double money = 10;
+            Tuple<double, int> variables = new Tuple<double, int> (money, pokeBalls);
             List<string> Inventory = new List<string>(); 
             Random juhuArv = new Random(); // random generaator
             string mängijaMängib = "yes";  // kas mängija veel mängib ?
+            
+
 
             do
             {
@@ -25,28 +29,29 @@ namespace _7.___simple_guess
 
                 do
                 {
+
                     int järgmineEvent = juhuArv.Next(1,6);
                     switch (järgmineEvent)
                     {
                         case 1:
-                            pokeBalls = WildBidoof(juhuArv, pokeBalls,money,Inventory);
+                            variables = WildBidoof(juhuArv,Inventory,variables);
                             Thread.Sleep(2000);
                                 break;
                         case 2:
-                            pokeBalls = Charizard(juhuArv, pokeBalls,money);
+                            variables = Charizard(juhuArv,variables);
                             Thread.Sleep(2000);
                                 break;
                         case 3:
-                            pokeBalls = Shop(pokeBalls,money);
+                            variables = Shop(variables);
                             Thread.Sleep(2000);
                             break;
                         case 4:
-                            money = Tepig(pokeBalls,money,juhuArv);
+                            variables = Tepig(juhuArv,variables);
                             Thread.Sleep(2000);
                             break;
                         case 5:
-                            money = Hatterene(pokeBalls, money);
-                            Thread.Sleep(2000);
+                            variables = Hatterene(variables);
+                            Thread.Sleep(500);
                             break;
                     }
 
@@ -57,9 +62,9 @@ namespace _7.___simple_guess
                 if (pokeBalls <= 0)
                 {
                     Console.Clear();
-                    Stats(money, pokeBalls);
+                    Stats(variables);
                     Console.WriteLine("---= do you wanna play again ? =---"); //küsib kas soovid veel mängida
-                    mängijaMängib = Console.ReadLine(); //kasutaj avastus
+                    mängijaMängib = Console.ReadLine();                       //kasutaj avastus
                     if(mängijaMängib == "yes")
                     {
                         pokeBalls = 3;
@@ -69,9 +74,10 @@ namespace _7.___simple_guess
                 else if (money <= 0)
                 {
                     Console.Clear();
-                    Stats(money, pokeBalls);
+                    Stats(variables);
+                    Console.WriteLine("You ran out of money so all pokemon lost interest and fled !");
                     Console.WriteLine("---= do you wanna play again ? =---"); //küsib kas soovid veel mängida
-                    mängijaMängib = Console.ReadLine(); //kasutaj avastus
+                    mängijaMängib = Console.ReadLine();                       //kasutaj avastus
                     if (mängijaMängib == "yes")
                     {
                         pokeBalls = 3;
@@ -84,70 +90,85 @@ namespace _7.___simple_guess
 
         }
 
-        public static double Hatterene(int pokeBalls, double money)
+         
+
+        public static Tuple<double,int> Hatterene(Tuple<double,int> variables)
         {
             Console.Clear();
-            Stats(money, pokeBalls);
-            Console.WriteLine("Hattere notices you in the forest\n and donates 5 coins from pity\n \n Press enter to say \"Thank you\"");
+            Stats(variables);
+            Console.WriteLine("\nHattere notices you in the forest\n and donates 5 coins from pity\n \n Press enter to say \"Thank you\"");
             Console.ReadLine();
-            return money + 5; 
+            double uusRaha = variables.Item1 + 5;
+            variables = new Tuple<double, int>(uusRaha, variables.Item2);
+            return variables; 
         }
 
-        public static double Tepig(int pokeBalls, double money, Random juhuarv)
+        public static Tuple<double,int> Tepig(Random juhuarv, Tuple<double,int> variables)
         {
             Console.Clear();
-            Stats(money, pokeBalls);
+            Stats(variables);
             Console.WriteLine("\nTepig runs to you with a sad face \nwill you help them out ?");
             string Ans4 = Console.ReadLine();
             if(Ans4 == "yes")
             {
                 int seeJuhuarv = juhuarv.Next(1, 5);
                 Console.WriteLine("\nTepig happily too your "+seeJuhuarv+" and fled");
-                return money - seeJuhuarv; 
+
+                double uusMoney = variables.Item2 + seeJuhuarv;
+                variables = new Tuple<double, int>(uusMoney, variables.Item2);
+                return variables; 
             }
             else
             {
                 Console.WriteLine("\nTepig kicks you and steals 10 coins");
-                return money - 10;
+                double uusMoney = variables.Item2 - 10;
+                variables = new Tuple<double, int>(uusMoney, variables.Item2);
+                return variables;
+                
             }
   
         }
 
-        public static int Shop(int pokeBalls, double money)
+        public static Tuple<double,int> Shop(Tuple<double,int> variables)
         {
             Console.Clear();
-            Stats(money,pokeBalls);
+            Stats(variables);
             Console.WriteLine("\nYou approach a shop, they sell pokeballs\nWould you like to buy some ?");
             string Ans2 = Console.ReadLine();
-            if(Ans2 == "yes")
+            if (Ans2 == "yes")
             {
                 Console.WriteLine("\nHow many would you like to buy ?. 1 costs 2 coins");
                 int Ans3 = int.Parse(Console.ReadLine());
-                int vahesumma = (Ans3*2);
-                if (vahesumma > money)
+                int vahesumma = (Ans3 * 2);
+                if (vahesumma > variables.Item1)
                 {
                     Console.WriteLine("\nno enough coins");
-                    return pokeBalls;
+                    return variables;
                 }
-                else 
+                else
                 {
-                    Console.WriteLine("\nyou have successfully bought "+Ans3+" pokeballs");
-                    
-                    return pokeBalls + Ans3;
+                    Console.WriteLine("\nyou have successfully bought " + Ans3 + " pokeballs");
+                    int uusPokeballs = variables.Item2 + Ans3;
+                    double uusRaha = variables.Item1 - vahesumma;
+                    variables = new Tuple<double, int>(uusRaha, uusPokeballs);
+
+                    return variables;
                 }
 
             }
-            return pokeBalls;
-
+            else
+            {
+                return variables;
+            }
 
 
             
         }
 
-        public static int WildBidoof(Random juhuArv,int pokeBalls,double money,List<string> Inventory)
+        public static Tuple<double,int> WildBidoof(Random juhuArv,List<string> Inventory,Tuple<double,int> variables)
         {
             Console.Clear();
-            Stats(money, pokeBalls);
+            Stats(variables);
             int seeJuhuarv = juhuArv.Next(1, 10); //suvaline number vahemikus 1 - 10
             Console.WriteLine("\na wild Bidoof has spawned, guess how many power it has to capture it !!!\nguess: ");
             int kasutajaArv = int.Parse(Console.ReadLine()); //ootame kasutaja vastust
@@ -156,20 +177,22 @@ namespace _7.___simple_guess
             {
                 Console.WriteLine("\nyou caught the wild bedoof :3");
                 Inventory.Add("Bidoof");
-                return pokeBalls;
+                return variables;
 
             }
             else
             {
                 Console.WriteLine("\nA wild Bidoof got away");
-                return (pokeBalls - 1);
+                int uusPokeball = variables.Item2 - 1;
+                variables = new Tuple<double, int>(variables.Item1, uusPokeball);
+                return variables;
             }
         }
 
-        public static int Charizard(Random juhuarv, int pokeBalls, double money)
+        public static Tuple<double,int> Charizard(Random juhuarv, Tuple<double,int> variables)
         {
             Console.Clear();
-            Stats(money,pokeBalls);
+            Stats(variables);
             Console.WriteLine("\na Charizard appears with a mystery bag\ndo you wanna open it ? ");
             string Ans1 = Console.ReadLine();
             if (Ans1 == "yes")
@@ -178,25 +201,31 @@ namespace _7.___simple_guess
                 if (seejuhuarv >= 0)
                 {
                     Console.WriteLine("\nyou have recived extra "+seejuhuarv+" pokeballs");
-                    return pokeBalls + seejuhuarv;
+                    int uusPokeballs = variables.Item2 + seejuhuarv;
+                    variables = new Tuple<double, int>(variables.Item1, uusPokeballs);
+                    return variables;
                 }
                 else
                 {
                     Console.WriteLine("\nCharizard stole "+(seejuhuarv * (-1))+" pokeballs from you and fled");
-                    return pokeBalls - (seejuhuarv * (-1));
+                    int uusPokeballs = variables.Item2 - seejuhuarv;
+                    variables = new Tuple<double, int>(variables.Item1, uusPokeballs);
+                    return variables;
                 }
             }
             
             else
             {
-                return pokeBalls;
+                return variables;
             }
         }
-        public static void Stats(double money, int pokeBalls)
+        public static void Stats(Tuple<double,int> variables)
         {
-            Console.WriteLine("pokeballs left : " + pokeBalls);
-            Console.WriteLine("money left : " + money + " coins");
+            Console.WriteLine("pokeballs left : " + variables.Item2);
+            Console.WriteLine("money left : " + variables.Item1 + " coins");
         }
+
+       
         
 
     }

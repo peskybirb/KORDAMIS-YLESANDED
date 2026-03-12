@@ -14,10 +14,11 @@ namespace _7.___simple_guess
             //add bleeding with bool that remember if u are or are not bleeding adds a even that removes bleeding
 
             //kodune ülesanne raha muutuja ja 3 eventi mis muudavad raha seisu 
+            bool bleeding = false;
             int pokeBalls = 3;
             double money = 10;
-            Tuple<double, int> variables = new Tuple<double, int> (money, pokeBalls);
-            List<string> Inventory = new List<string>(); 
+            List<string> inventory = new List<string>();
+            Tuple<double, int, bool, List<string>> variables = new Tuple<double, int, bool, List<string>> (money, pokeBalls, bleeding, inventory );
             Random juhuArv = new Random(); // random generaator
             string mängijaMängib = "yes";  // kas mängija veel mängib ?
             
@@ -25,7 +26,6 @@ namespace _7.___simple_guess
 
             do
             {
-                Console.WriteLine("pokeballs left : "+pokeBalls);
 
                 do
                 {
@@ -34,7 +34,7 @@ namespace _7.___simple_guess
                     switch (järgmineEvent)
                     {
                         case 1:
-                            variables = WildBidoof(juhuArv,Inventory,variables);
+                            variables = WildBidoof(juhuArv,variables);
                             Thread.Sleep(2000);
                                 break;
                         case 2:
@@ -53,6 +53,7 @@ namespace _7.___simple_guess
                             variables = Hatterene(variables);
                             Thread.Sleep(500);
                             break;
+
                     }
 
 
@@ -92,18 +93,18 @@ namespace _7.___simple_guess
 
          
 
-        public static Tuple<double,int> Hatterene(Tuple<double,int> variables)
+        public static Tuple<double, int, bool, List<string>> Hatterene(Tuple<double, int, bool, List<string>> variables)
         {
             Console.Clear();
             Stats(variables);
             Console.WriteLine("\nHattere notices you in the forest\n and donates 5 coins from pity\n \n Press enter to say \"Thank you\"");
             Console.ReadLine();
             double uusRaha = variables.Item1 + 5;
-            variables = new Tuple<double, int>(uusRaha, variables.Item2);
+            variables = new Tuple<double, int, bool, List<string>> (uusRaha, variables.Item2, variables.Item3, variables.Item4);
             return variables; 
         }
 
-        public static Tuple<double,int> Tepig(Random juhuarv, Tuple<double,int> variables)
+        public static Tuple<double, int, bool, List<string>> Tepig(Random juhuarv, Tuple<double, int, bool, List<string>> variables)
         {
             Console.Clear();
             Stats(variables);
@@ -112,24 +113,24 @@ namespace _7.___simple_guess
             if(Ans4 == "yes")
             {
                 int seeJuhuarv = juhuarv.Next(1, 5);
-                Console.WriteLine("\nTepig happily too your "+seeJuhuarv+" and fled");
+                Console.WriteLine("\nTepig happily took your "+seeJuhuarv+" and fled");
 
                 double uusMoney = variables.Item2 + seeJuhuarv;
-                variables = new Tuple<double, int>(uusMoney, variables.Item2);
+                variables = new Tuple<double, int, bool, List<string>> (uusMoney, variables.Item2, variables.Item3, variables.Item4);
                 return variables; 
             }
             else
             {
                 Console.WriteLine("\nTepig kicks you and steals 10 coins");
                 double uusMoney = variables.Item2 - 10;
-                variables = new Tuple<double, int>(uusMoney, variables.Item2);
+                variables = new Tuple<double, int, bool, List<string>> (uusMoney, variables.Item2, variables.Item3, variables.Item4);
                 return variables;
                 
             }
   
         }
 
-        public static Tuple<double,int> Shop(Tuple<double,int> variables)
+        public static Tuple<double, int, bool, List<string>> Shop(Tuple<double, int, bool, List<string>> variables)
         {
             Console.Clear();
             Stats(variables);
@@ -150,7 +151,7 @@ namespace _7.___simple_guess
                     Console.WriteLine("\nyou have successfully bought " + Ans3 + " pokeballs");
                     int uusPokeballs = variables.Item2 + Ans3;
                     double uusRaha = variables.Item1 - vahesumma;
-                    variables = new Tuple<double, int>(uusRaha, uusPokeballs);
+                    variables = new Tuple<double, int, bool, List<string>> (uusRaha, uusPokeballs, variables.Item3, variables.Item4);
 
                     return variables;
                 }
@@ -165,7 +166,9 @@ namespace _7.___simple_guess
             
         }
 
-        public static Tuple<double,int> WildBidoof(Random juhuArv,List<string> Inventory,Tuple<double,int> variables)
+
+
+        public static Tuple<double, int, bool, List<string>> WildBidoof(Random juhuArv, Tuple<double, int, bool, List<string>> variables)
         {
             Console.Clear();
             Stats(variables);
@@ -176,7 +179,7 @@ namespace _7.___simple_guess
             if(kasutajaArv == seeJuhuarv)
             {
                 Console.WriteLine("\nyou caught the wild bedoof :3");
-                Inventory.Add("Bidoof");
+                variables.Item4.Add("Bidoof");
                 return variables;
 
             }
@@ -184,12 +187,12 @@ namespace _7.___simple_guess
             {
                 Console.WriteLine("\nA wild Bidoof got away");
                 int uusPokeball = variables.Item2 - 1;
-                variables = new Tuple<double, int>(variables.Item1, uusPokeball);
+                variables = new Tuple<double, int, bool, List<string>>(variables.Item1, uusPokeball, variables.Item3, variables.Item4);
                 return variables;
             }
         }
 
-        public static Tuple<double,int> Charizard(Random juhuarv, Tuple<double,int> variables)
+        public static Tuple<double, int, bool, List<string>> Charizard(Random juhuarv, Tuple<double, int, bool, List<string>> variables)
         {
             Console.Clear();
             Stats(variables);
@@ -202,14 +205,14 @@ namespace _7.___simple_guess
                 {
                     Console.WriteLine("\nyou have recived extra "+seejuhuarv+" pokeballs");
                     int uusPokeballs = variables.Item2 + seejuhuarv;
-                    variables = new Tuple<double, int>(variables.Item1, uusPokeballs);
+                    variables = new Tuple<double, int, bool, List<string>>(variables.Item1, uusPokeballs, variables.Item3, variables.Item4);
                     return variables;
                 }
                 else
                 {
                     Console.WriteLine("\nCharizard stole "+(seejuhuarv * (-1))+" pokeballs from you and fled");
                     int uusPokeballs = variables.Item2 - seejuhuarv;
-                    variables = new Tuple<double, int>(variables.Item1, uusPokeballs);
+                    variables = new Tuple<double, int, bool, List<string>>(variables.Item1, uusPokeballs, variables.Item3, variables.Item4);
                     return variables;
                 }
             }
@@ -219,12 +222,45 @@ namespace _7.___simple_guess
                 return variables;
             }
         }
-        public static void Stats(Tuple<double,int> variables)
+        public static void Stats(Tuple<double, int, bool, List<string>> variables)
         {
             Console.WriteLine("pokeballs left : " + variables.Item2);
             Console.WriteLine("money left : " + variables.Item1 + " coins");
+            if (variables.Item3 == false)
+            {
+                Console.WriteLine("Bleeding: no");
+            }
+            else
+            {
+                Console.WriteLine("Bleeding: yes");
+            }
+                Console.WriteLine("Inventory: " + variables.Item4.Count + " pokemons");
         }
 
+        public static void SaveGame(Tuple<double, int, bool, List<string>> variables)
+        {
+            string save = "SaveGame.txt";
+            if (File.Exists(save))
+            {
+                Console.WriteLine("Do you wanna overwrite the save ?");
+                string overWrite = Console.ReadLine();
+
+                if(overWrite == "yes")
+                {
+
+
+
+                }
+                File.Create(save).Close;
+                File.AppendAllLines(save,variables.Item1.ToString());
+
+
+                
+
+            }
+            
+
+        }
        
         
 

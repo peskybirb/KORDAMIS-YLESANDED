@@ -8,15 +8,20 @@ namespace Adventure
 {
     public class Player
     {
-        public struct Location
+        public struct Point2D
         {
-            public Location(int x, int y)
+            public Point2D(int x, int y)
             {
                 X = x;
                 Y = y;
             }
             public int? X { get; set; } = 0;
             public int? Y { get; set; } = 0;
+
+            public override string ToString()
+            {
+                return $"{X} , {Y}";
+            }
 
         }
 
@@ -25,7 +30,7 @@ namespace Adventure
             int health,
             int money,
             List<string> backpack,
-            Location playerLocation
+            Point2D playerLocation
             )
         {
             Lives = lives;
@@ -38,7 +43,21 @@ namespace Adventure
         public int? Heatlh { get; set; } = 100;
         public int Money { get; set; }
         public List<string> Backpack { get; set; }
-        public Location PlayerLocation { get; set; }
+        public Point2D PlayerLocation { get; set; }
 
+        internal void DisplayStats()
+        {
+            Console.WriteLine($"Lives remaining: {Lives}\nHealth remaining: {Heatlh}\nMoney left: {Money}");
+        }
+        public void CheckHelth()
+        {
+            if(Heatlh <= 0)
+            {
+                Lives--;
+                Heatlh = 100;
+            }
+
+
+        }
     }
 }

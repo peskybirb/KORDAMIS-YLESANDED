@@ -1,0 +1,1 @@
+Teen selle kodutöö õpetaja failiga kuna mu enda "mäng" on natukene buggy ja oleks vaja väga palju ümber kirjutamist milleks aega mul hetkel ei ole.

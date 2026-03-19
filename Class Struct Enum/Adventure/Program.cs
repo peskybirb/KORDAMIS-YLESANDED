@@ -9,12 +9,16 @@
             Player player = new Player(3 ,100 ,0 , new List<string>(), new Player.Point2D(0, 0));
             string playAgain = "yes";
 
+            World map = new World("helloworld",player.PlayerLocation, new Player.Point2D(0,0));
+
             do
             {
                 Console.Clear();
                 player.DisplayStats();
                 EventSystem.NextEncounter(player, rng);
+
                 player.CheckHelth();
+
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
                 if(player.Lives <= 0)

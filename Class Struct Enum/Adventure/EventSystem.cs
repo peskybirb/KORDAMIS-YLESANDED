@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static Adventure.Player;
-
 namespace Adventure
 {
+    public enum WhatEvent
+    {
+        Witch,StrangeFigure,Shop,WanderingSage, AOverturnedCart,DuelBattle
+    }
     public class EventSystem
     {
         public static void NextEncounter(Player player, World map, Random rng)
@@ -31,6 +34,13 @@ namespace Adventure
                 case 5:
                     Event5_AOverturnedCart(player);
                     break;
+                case 6:
+                    Console.WriteLine("Sa kaotasid Fighti");
+                    Environment.Exit(0);  
+
+                    //YIPPIEEEEEEE UUS MÄNG
+                    break;
+
                 default:
                     break;
             }
@@ -158,7 +168,7 @@ namespace Adventure
             int mapXmax = map.Map.GetLength(0)-1;
             int mapYmax = map.Map.GetLength(1)-1;
 
-            Console.WriteLine("Kuhu sa edasi minna tahad? , vali suund , (vali täht)");
+            Console.WriteLine("Which way do you wanna go, (Select a letter)");
             Console.WriteLine("   N   ");
             Console.WriteLine("W  +  E");
             Console.WriteLine("   S   ");
@@ -223,7 +233,6 @@ namespace Adventure
             }
 
         }
-
         internal static bool CheckWin(Point2D playerLocation, Point2D goal)
         {
             if(playerLocation.ToString() == goal.ToString())

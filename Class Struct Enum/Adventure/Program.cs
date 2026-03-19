@@ -6,16 +6,28 @@
         {
             //lisada bleeding + save game
             Random rng = new Random();
-            Player player = new Player(3 ,100 ,0 , new List<string>(), new Player.Point2D(0, 0));
+            
             string playAgain = "yes";
 
-            World map = new World("helloworld",player.PlayerLocation, new Player.Point2D(0,0));
 
+            //rewrite this abit from ss
+            World map = new World("helloworld",new Player.Point2D(3,9), new Player.Point2D(6,8));
+            Player player = new Player(3, 100, 0, new List<string>(), map.StartingPoint);
 
             do
             {
                 Console.Clear();
+
+                Console.WriteLine("---------------------------------------------------------");
                 player.DisplayStats();
+                Console.WriteLine("---------------------------------------------------------");
+
+                bool didPlayerWin = EventSystem.CheckWin(player.PlayerLocation, map.Goal);
+                if(didPlayerWin)
+                {
+                    return;
+                }
+
                 EventSystem.NextEncounter(player,map,rng);
                 EventSystem.NextLocation(player, map);
 
@@ -36,10 +48,12 @@
 
             }while(player.Lives > 0 || playAgain == "yes");
 
-            
-            
 
-            
+
+            if (player.Lives > 0)
+            {
+                Console.WriteLine("Winner winner chicken dinner");
+            }
         }
     }
     }

@@ -63,7 +63,7 @@ namespace Adventure
 
         private static void Event3_Shop(Player player)
         {
-            Console.Clear();
+            
             Console.WriteLine("\nYou approach a shop, they sell Healing potions\nWould you like to buy some ?");
             string Ans2 = Console.ReadLine();
             if (Ans2 == "yes")
@@ -88,14 +88,14 @@ namespace Adventure
         }
         private static void Event5_AOverturnedCart(Player player)
         {
-            Console.Clear();
+            
             Console.WriteLine("You see something shiny and take a closer look \nYou found 10 coins \n\nPress enter to continue");
             Console.ReadLine();
             player.Money += 10;
         }
         private static void Event4_WanderingSage(Player player, Random rng)
         {
-            Console.Clear();
+            
             Console.WriteLine("\nSage wanders helplessly \nwill you help them out ?");
             string Ans4 = Console.ReadLine();
             if (Ans4 == "yes")
@@ -113,7 +113,7 @@ namespace Adventure
         }
         private static void Event2_StrangeFigure(Player player, Random rng)
         {
-            Console.Clear();
+            
             Console.WriteLine("\na A strange figure appears offering you a mystery bag ");
             string Ans1 = Console.ReadLine();
             if (Ans1 == "yes")
@@ -136,7 +136,7 @@ namespace Adventure
         }
         private static void Event1_Witch(Player player, Random rng)
         {
-            Console.Clear();
+            
             int seeJuhuarv = rng.Next(1, 10); //suvaline number vahemikus 1 - 10
             Console.WriteLine("\na witch appeared , guess my power to escape !!!");
             int kasutajaArv = int.Parse(Console.ReadLine()); //ootame kasutaja vastust
@@ -158,7 +158,7 @@ namespace Adventure
             int mapXmax = map.Map.GetLength(0)-1;
             int mapYmax = map.Map.GetLength(1)-1;
 
-            Console.WriteLine("Kuhu sa edasi minna tahad? , vali suund , (vali täht)P");
+            Console.WriteLine("Kuhu sa edasi minna tahad? , vali suund , (vali täht)");
             Console.WriteLine("   N   ");
             Console.WriteLine("W  +  E");
             Console.WriteLine("   S   ");
@@ -175,11 +175,11 @@ namespace Adventure
                     break;
                 case "W":
                     nextLocaton = CheckCandidate(mapYmax, player.PlayerLocation.X - 1, true);
-                    player.PlayerLocation = new Point2D(nextLocaton - 1, player.PlayerLocation.Y);
+                    player.PlayerLocation = new Point2D(nextLocaton, player.PlayerLocation.Y);
                     break;
                 case "E":
                     nextLocaton = CheckCandidate(mapYmax, player.PlayerLocation.X + 1);
-                    player.PlayerLocation = new Point2D(nextLocaton + 1, player.PlayerLocation.Y);
+                    player.PlayerLocation = new Point2D(nextLocaton, player.PlayerLocation.Y);
                     break;
 
 
@@ -224,6 +224,17 @@ namespace Adventure
 
         }
 
+        internal static bool CheckWin(Point2D playerLocation, Point2D goal)
+        {
+            if(playerLocation.ToString() == goal.ToString())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 
 }

@@ -15,8 +15,8 @@ namespace Adventure
                 X = x;
                 Y = y;
             }
-            public int? X { get; set; } = 0;
-            public int? Y { get; set; } = 0;
+            public int X { get; set; } = 0;
+            public int Y { get; set; } = 0;
 
             public override string ToString()
             {
@@ -45,9 +45,10 @@ namespace Adventure
         public List<string> Backpack { get; set; }
         public Point2D PlayerLocation { get; set; }
 
-        internal void DisplayStats()
+        public void DisplayStats()
         {
             Console.WriteLine($"Lives remaining: {Lives}\nHealth remaining: {Heatlh}\nMoney left: {Money}");
+            Console.WriteLine($"Asud siin:{PlayerLocation.ToString()} ");
         }
         public void CheckHelth()
         {

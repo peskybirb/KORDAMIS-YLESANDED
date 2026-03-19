@@ -11,11 +11,13 @@
 
             World map = new World("helloworld",player.PlayerLocation, new Player.Point2D(0,0));
 
+
             do
             {
                 Console.Clear();
                 player.DisplayStats();
-                EventSystem.NextEncounter(player, rng);
+                EventSystem.NextEncounter(player,map,rng);
+                EventSystem.NextLocation(player, map);
 
                 player.CheckHelth();
 

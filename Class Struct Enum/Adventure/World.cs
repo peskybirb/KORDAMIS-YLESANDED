@@ -7,13 +7,13 @@ using static Adventure.Player;
 
 namespace Adventure
 {
-    internal class World
+    public class World
     {
 
-        int[,] Map {  get; set; }
-        string WorldName { get; set; }
-        Point2D StartingPoint { get; set; }
-        Point2D Goal {  get; set; }
+        public int[,] Map {  get; set; }
+        public string WorldName { get; set; }
+        public Point2D StartingPoint { get; set; }
+        public Point2D Goal {  get; set; }
 
         /// <summary>
         /// Constructor for default world, with the size of 10x10
@@ -30,6 +30,7 @@ namespace Adventure
             Goal = end;
         }
         
+
         /// <summary>
         /// Constructor for default world, with the size of 10x10
         /// </summary>
@@ -45,6 +46,8 @@ namespace Adventure
             StartingPoint = start;
             Goal = end;
         }
+
+
         /// <summary>
         /// Method to generate a new map  randomly
         /// </summary>
@@ -57,17 +60,14 @@ namespace Adventure
             Random rng = new Random();
             for(int i = 0; i < size;i++)
             {
-
                 for(int j = 0;j < size;j++)
                 {
                     newmap[i, j] = rng.Next(1, maxEventInteger + 1);
                 }
-
             }
-
-
             return newmap;
         }
+
     }
 
 }

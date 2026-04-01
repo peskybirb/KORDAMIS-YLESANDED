@@ -5,6 +5,8 @@ namespace _7_SimpleGuess
 {
     internal class Program
     {
+        public static bool exit { get; set; } = true;
+        public static string SaveRequest { get; set; } = string.Empty;
         static void Main(string[] args)
         {
             /*
@@ -70,21 +72,6 @@ namespace _7_SimpleGuess
              * 
              */
 
-
-            // 1. Lisa viis Laadida ✅
-            // 2. Lisa viis Küsida meetodiga kas soovib lahkuda  --- blin
-
-            // How ma san tagasi ja Loopist välja bruv 😭
-
-            // 3. Lisa viis salvestada ✅
-            // 4. kirjuta laadimis meetod ümber ✅
-
-            // 5. Kontrolli kas salvetamine töötab 
-            // 6. Kontrolli kas laadimine töötab
-
-
-
-
             string SaveTime = string.Empty;
             int moni = 10;
             int elud = 3;
@@ -95,8 +82,19 @@ namespace _7_SimpleGuess
             if (File.Exists("SaveGame.txt"))
             {
                 Console.WriteLine("Kas sa soovid oma salvestuse laadida ? ");
-                string Laadimine = Console.ReadLine();
-                if(Laadimine.ToLower() == "jah")
+                string Laadimine = AskUser();
+                if (Laadimine == "SAVE-GAME")
+                {
+                    // user asked to save before even starting - save current defaults and exit
+                    Tuple<int, int, bool, List<string>> SaveData = new Tuple<int, int, bool, List<string>>(moni, elud, bleeding, seljaKott);
+                    CreateSave(SaveData);
+                    Environment.Exit(0);
+                }
+                else if (Laadimine == "EXIT")
+                {
+                    Environment.Exit(0);
+                }
+                else if (Laadimine.ToLower() == "jah")
                 {
                     Tuple<int, int, bool, List<string>> LoadedData = new Tuple<int, int, bool, List<string>>(moni, elud, bleeding, seljaKott);
                     LoadedData = LoadData();
@@ -124,6 +122,7 @@ namespace _7_SimpleGuess
                     {
                         //Exit
                         Environment.Exit(0);
+                        mängijaMängib = "ei";
                     }
                     else
                     { 
@@ -177,15 +176,25 @@ namespace _7_SimpleGuess
                         default:
                             break;
                     }
+                    // if any event set a global save/exit request, propagate it to main loop
+                    if (!string.IsNullOrEmpty(SaveRequest))
+                    {
+                        SaveTime = SaveRequest;
+                        SaveRequest = string.Empty;
+                    }
                 } //end on else
-                    Console.WriteLine("\nVajuta ükskõik mis klahvi et jätkata");
-                    Console.ReadLine();
+                    Console.WriteLine("\nVajuta ükskõik mis klahvi et jätkata (või kirjuta 'exit')");
+                    string continueInput = AskUser();
+                    if (continueInput == "SAVE-GAME" || continueInput == "EXIT")
+                    {
+                        SaveTime = continueInput;
+                    }
                 } while (elud > 0);
 
                 if (elud <= 0)
                 {
                     Console.WriteLine("--== Kas soovid uuesti mängida, sul on elusi 0 ==--"); //kas kasutaja soovib uuesti mängida
-                    mängijaMängib = Console.ReadLine(); //saa vastus
+                    mängijaMängib = AskUser(); //saa vastus
                     if (mängijaMängib == "jah")
                     {
                         elud = 3;
@@ -207,9 +216,9 @@ namespace _7_SimpleGuess
             string saveName = "SaveGame.txt";
             if (File.Exists(saveName))
             {
-                Console.WriteLine("Save file was found \nWould you like to overwrite it ?");
-                string userInpt = Console.ReadLine();
-                if (userInpt == "yes")
+                Console.WriteLine("Salvestus on leitud \nKas soovid üle kirjutada ?");
+                string userInpt = AskUser();
+                if (userInpt == "jah")
                 {
                     stats = new Tuple<int, int, bool, List<string>>(stats.Item1, stats.Item2, stats.Item3, stats.Item4);
 
@@ -237,30 +246,34 @@ namespace _7_SimpleGuess
             }
 
         }
-
         public static string AskUser()
         {
             string Answer = Console.ReadLine();
-            if(Answer.ToLower() == "exit")
+            if (Answer == null)
+                return string.Empty;
+            if (Answer.ToLower() == "exit")
             {
                 Console.WriteLine("Kas soovid savlestada enne lahkumist ?");
-                Answer = Console.ReadLine();
-                if (Answer.ToLower() == "jah")
+                string saveAns = Console.ReadLine();
+                if (saveAns != null && saveAns.ToLower() == "jah")
                 {
-                    // siin läheb  programm salvestama
+                    SaveRequest = "SAVE-GAME";
                     return "SAVE-GAME";
-
                 }
                 else
                 {
-                    //peab exitima ilma saveimatta
+                    SaveRequest = "EXIT";
+                    Program.exit = false;
                     return "EXIT";
                 }
             }
-            else
-            {
-                return Answer;
-            }
+            return Answer;
+        }
+
+        // keep overload for existing calls
+        public static string AskUser(bool exit1)
+        {
+            return AskUser();
         }
         //Load data laeb data failist --- vaja ümberkirjutada natukene kuna võetud mul teisest mängust
         public static Tuple<int,int,bool,List<string>> LoadData()
@@ -277,7 +290,7 @@ namespace _7_SimpleGuess
                 int money = int.Parse(stat[1]);
                 bool status = bool.Parse(stat[2]);
 
-                string[] splitItems = stat[1].Split(new char[] { ',' });
+                string[] splitItems = stat[3].Split(new char[] { ',' });
                 List<string> inventory = new List<string>();
 
                 foreach (string item in splitItems)
@@ -393,11 +406,15 @@ namespace _7_SimpleGuess
         {
             int moni = datas[0];
             int elud = datas[1];
-            Console.WriteLine("Kõnnid mööda teed, ja vastu tuleb huvtava kujuga põlvekõrgune mätas");
+            Console.WriteLine("Kõnnid mööda teed, ja vastu tuleb huvitava kujuga põlvekõrgune mätas");
             Console.WriteLine("Mätas on keset teed ees, ei saa ei üle ega ümber sest oled laisk, mida teed?");
             Console.WriteLine("1 - ronin üle\n2 - kaevan lahti\n3 - pööran ringi ja lähen tagasi");
             Console.WriteLine("kirjuta vastava valiku number");
-            string vastus = Console.ReadLine();
+            string vastus = AskUser();
+            if (vastus == "SAVE-GAME" || vastus == "EXIT")
+            {
+                return new List<int> { moni, elud };
+            }
             switch (vastus)
             {
                 case "1":
@@ -420,7 +437,11 @@ namespace _7_SimpleGuess
         private static List<string> Nuga(List<string> seljaKott)
         {
             Console.WriteLine("Leiad maast noa, ta on verine, kas sa võtad selle üles?:");
-            string vastus = Console.ReadLine();
+            string vastus = AskUser();
+            if (vastus == "SAVE-GAME" || vastus == "EXIT")
+            {
+                return seljaKott;
+            }
             if (vastus == "jah")
             {
                 Console.WriteLine("Panid noa seljakotti");
@@ -437,7 +458,11 @@ namespace _7_SimpleGuess
         {
             int seeneEffekt = juhuArv.Next(-4, 4);
             Console.WriteLine("Leiad seene, kas tahad seda maitsta?:");
-            string vastus = Console.ReadLine();
+            string vastus = AskUser();
+            if (vastus == "SAVE-GAME" || vastus == "EXIT")
+            {
+                return elud;
+            }
             if (vastus == "jah")
             {
                 if (seeneEffekt >= 0)
@@ -461,7 +486,11 @@ namespace _7_SimpleGuess
         private static int Nõid(Random juhuArv, int elud)
         {
             Console.WriteLine("NYEH! Oled eksinud minu koju! Mis sul - sissetungijal - öelda on!!!");
-            string vastus = Console.ReadLine();
+            string vastus = AskUser();
+            if (vastus == "SAVE-GAME" || vastus == "EXIT")
+            {
+                return elud;
+            }
             if (vastus.ToLower() == "palun vabandust")
             {
                 Console.WriteLine("No olgu, eks sa mine siis...");
@@ -492,9 +521,20 @@ namespace _7_SimpleGuess
             {
                 Console.WriteLine("Hahaaa, olen kuri kratt, aga sa saad minust jagu, kui arvad ära, \n mitme vanaeide käed ma olen otsast ära söönud!"); //flavourtext
                 Console.WriteLine("Arva:"); //oota kasutajalt sisestust
-                int kasutajaArv = int.Parse(Console.ReadLine());
-
-                if (seeJuhuArv == kasutajaArv) // kontrolli sisestust tingimuslauses
+                string s = AskUser();
+                if (s == "SAVE-GAME" || s == "EXIT")
+                {
+                    SaveTime = SaveRequest;
+                    return new Tuple<Random, int, List<string>, int,string>(juhuArv, elud, seljaKott, moni, SaveTime);
+                }
+                int kasutajaArv;
+                if (!int.TryParse(s, out kasutajaArv))
+                {
+                    // invalid input - treat as wrong
+                    Console.WriteLine("Vale sisend, loetakse valeks.");
+                    elud -= 1;
+                }
+                else if (seeJuhuArv == kasutajaArv) // kontrolli sisestust tingimuslauses
                 {
                     Console.WriteLine("AIAIAIAAA, Y U DIS TO ME *sureb*"); //kui on õige
                 }
@@ -509,13 +549,28 @@ namespace _7_SimpleGuess
                 Console.WriteLine("Vastu tuleb kuri kratt, aga sul on nuga. Kratt ütleb:");
                 Console.WriteLine("\"Hahaaa, olen kuri kratt, aga sa saad minust jagu, kui arvad ära, \n mitme vanaeide käed ma olen otsast ära söönud!\"");
                 Console.WriteLine("Mida sa teed? Kas vastad (1) või ründad noaga (2)?");
-                string vastus = Console.ReadLine();
+                string vastus = AskUser();
+                if (vastus == "SAVE-GAME" || vastus == "EXIT")
+                {
+                    SaveTime = SaveRequest;
+                    return new Tuple<Random, int, List<string>, int,string>(juhuArv, elud, seljaKott, moni, SaveTime);
+                }
                 if (vastus == "1")
                 {
                     Console.WriteLine("Arva:"); //oota kasutajalt sisestust
-                    int kasutajaArv = int.Parse(Console.ReadLine());
-
-                    if (seeJuhuArv == kasutajaArv) // kontrolli sisestust tingimuslauses
+                    string s = AskUser();
+                    if (s == "SAVE-GAME" || s == "EXIT")
+                    {
+                        SaveTime = SaveRequest;
+                        return new Tuple<Random, int, List<string>, int,string>(juhuArv, elud, seljaKott, moni, SaveTime);
+                    }
+                    int kasutajaArv;
+                    if (!int.TryParse(s, out kasutajaArv))
+                    {
+                        Console.WriteLine("Vale sisend, loetakse valeks.");
+                        elud -= 1;
+                    }
+                    else if (seeJuhuArv == kasutajaArv) // kontrolli sisestust tingimuslauses
                     {
                         Console.WriteLine("AIAIAIAAA, Y U DIS TO ME *sureb*"); //kui on õige
                     }

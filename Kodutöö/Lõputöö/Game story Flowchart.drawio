@@ -1,0 +1,101 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="7HWZrMGNhA11yLERiyQF">
+    <mxGraphModel dx="3470" dy="2392" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-4" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FF66FF;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" value="Start of the game" vertex="1">
+          <mxGeometry height="110" width="235" x="308" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-6" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-8" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-3" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#00FF00;gradientColor=#97d077;strokeColor=#82b366;" value="Beginning explains the world and the backstory also includes the branch off the the good ending which needs 2 of the bad ending items (seperate items)" vertex="1">
+          <mxGeometry height="120" width="225" x="313" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-26" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-24" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-5" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#00CC00;gradientColor=#97d077;strokeColor=#82b366;" value="SPOILERS Good Ending&lt;div&gt;you use the 2 items from the other 2 endings to turn off the electricity tower to stop it from catching fire&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="618" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-10" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-7" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FF8000;gradientColor=#ffd966;strokeColor=#d6b656;" value="Start of the Fire:&lt;div&gt;The day of the fire starting to spread you wake up and see some massive smoke outside.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="313" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-12" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-9" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#330000;gradientColor=#ea6b66;strokeColor=#b85450;" value="Chapter 1:&lt;div&gt;the fire starts to spread but the ceviliance are not notified to leave yet so you stay and wait.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="313" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-16" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-30" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-11" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#330000;gradientColor=#ea6b66;strokeColor=#b85450;" value="Chapter 2:&lt;div&gt;The fire starts to spread and the city falls fast you gotta find a way to escape your home.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="313" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-31" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aFCHFd9QXKuCGjHY6E0O-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-10" y="820" />
+              <mxPoint x="-10" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-13" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#330000;gradientColor=#ea6b66;strokeColor=#b85450;" value="Bad Ending 1:&lt;div&gt;Your house falls upon Flames and you fall obtaining a key item &quot;Lever handle&quot; and puts the player back at the beginning maybe through a Menu #2 but maybe not&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="20" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-18" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-15" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#330000;gradientColor=#ea6b66;strokeColor=#b85450;" value="Chapter 3:&lt;div&gt;you manage to make it out of your house and wander the town&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="313" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-20" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-17" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#330000;gradientColor=#ea6b66;strokeColor=#b85450;" value="Chapter 4:&lt;div&gt;You find people waiting in line in their cars and try to find a car you can slip into and make it out&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="313" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-29" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-19" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#330000;gradientColor=#ea6b66;strokeColor=#b85450;" value="Final Escape:&lt;div&gt;You make it out of the smoke and flames with the help of a stranger&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="313" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-32" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aFCHFd9QXKuCGjHY6E0O-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-30" y="1420" />
+              <mxPoint x="-30" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-21" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#330000;gradientColor=#ea6b66;strokeColor=#b85450;" value="Bad Ending 2:&lt;div&gt;You made it out but all the city was in flames and burned down , Obtained key Item &quot;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Security key&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&quot; takes player back to&amp;nbsp; menu or beginning still deciding&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="30" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-23" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FF66FF;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" value="End of the game" vertex="1">
+          <mxGeometry height="140" width="240" x="1190" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-28" edge="1" parent="1" source="aFCHFd9QXKuCGjHY6E0O-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="aFCHFd9QXKuCGjHY6E0O-23" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aFCHFd9QXKuCGjHY6E0O-24" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#00FF00;gradientColor=#97d077;strokeColor=#82b366;" value="AFTERWORDS:&lt;div&gt;Thanking th eplayer and concratulating on compleating the game&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" x="900" y="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

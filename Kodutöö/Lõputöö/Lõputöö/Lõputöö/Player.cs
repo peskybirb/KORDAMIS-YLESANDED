@@ -49,10 +49,14 @@ namespace Lõputöö
                 Console.Write($"| Inventory: ");
                 foreach (string item in Inventory)
                 {
-                    Console.Write(item + " ");
+                    Console.Write(item + ", ");
                 }
                 Console.WriteLine("\n");
             }
+        }
+        public void Burning()
+        {
+            //add a burning effect that damages the player for 5 hp every 20 seconds for 1 minute unless they use a water bottle item
         }
     }
 }

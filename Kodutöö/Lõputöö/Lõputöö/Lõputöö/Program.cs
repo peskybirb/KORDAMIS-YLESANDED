@@ -16,7 +16,10 @@ namespace Lõputöö
             - liht ja komposiitandmetüübid 🤌
             - enum 🤌
             - castimine 🤌
-            - töö failidega
+            - töö failidega 🤌
+
+            - mul pole mangugi ja mul on koik kasutatud smh 
+            - gg long asf projekt
             */
             bool playerAlive = true;
             Player player = new Player(100, false, string.Empty, 0, new List<string>() {"Phone" }, "SMenu");
@@ -24,6 +27,8 @@ namespace Lõputöö
             do
             {
                 Stages.StageSelect(player, rng);
+                Console.Clear();
+
                 if (player.HP <= 0)
                 {
                     playerAlive = false;

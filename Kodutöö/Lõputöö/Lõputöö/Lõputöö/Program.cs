@@ -37,6 +37,8 @@ namespace Lõputöö
             }
             while (playerAlive == true);
 
+            Console.WriteLine("            --- YOU HAVE DIED ---");
+            Console.ReadLine();
 
 
         }

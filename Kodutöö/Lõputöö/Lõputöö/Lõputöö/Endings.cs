@@ -51,6 +51,8 @@ namespace Lõputöö
             string watchdoc = Stages.Userinput(player);
             if (watchdoc == "yes")
             {
+                // https://stackoverflow.com/questions/4580263/how-to-open-in-default-browser-in-c-sharp  <--- link to the place where I found this code
+
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = documentaryusrl,

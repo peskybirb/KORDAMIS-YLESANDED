@@ -7,6 +7,7 @@ using System.Numerics;
 using System.Reflection.Metadata;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -21,7 +22,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 // Final escape ✅
 
 // Good ending ✅
-// Bad ending 1 
+// Bad ending 1 ✅
 // Bad ending 2 ✅
 namespace Lõputöö
 {
@@ -377,60 +378,99 @@ namespace Lõputöö
         }
 
         /// <summary>
+        /// no sure it works correctly but it works better than my earlier soluton , shows the player the death message.
+        /// </summary>
+        /// <param name="player"></param>
+        public static void Death(Player player)
+        {
+            Console.Clear();
+            player.HP = 1;
+            string userinp = string.Empty;
+            Random newrng = new Random();
+            Console.WriteLine("""
+                _____________________________
+                |                           |
+                |                           |
+                |       YOU HAVE DIED       |        
+                |                           |
+                |___________________________|
+                """);
+            Console.WriteLine("The game will exit\nRelaunch the game to load save");
+            userinp = Userinput(player);
+            Environment.Exit(0);
+
+        }
+
+        /// <summary>
         /// Gets user iput and also checks if te user wants the exit the game.imports player cuz it might need to forward the data to the save function.
         /// </summary>
         /// <param name="player">imports player </param>
         /// <returns></returns>
         public static string Userinput(Player player)
         {
-            //userinput so it can always exit 
-            string userinp = Console.ReadLine();
-            if (userinp == "exit")
+            //userinput so it can always exit and check if player is still alive
+            if (player.HP <= 0)
             {
-
-                do
-                {
-                    Console.WriteLine("Would you like the save before exiting ?");
-                    userinp = Console.ReadLine();
-                    if (userinp == "yes")
-                    {
-                        Save(player);
-                    }
-                    else if (userinp == "no")
-                    {
-                        Environment.Exit(0);
-                    }
-                    else
-                    {
-                        Console.WriteLine("invalid input !");
-                    }
-                    return "EXIT";
-                } while (userinp == "yes" || userinp == "no");
-
+                Death(player);
+                return string.Empty;
             }
-            else if(userinp == "heal")
+            else
             {
-                 if(player.Inventory.Contains("Ibuprofen"))
+                string userinp = Console.ReadLine();
+                if (userinp == "exit")
                 {
-                    if(player.HP == 100)
+
+                    do
                     {
-                        Console.WriteLine("I don't need to heal righ tnow");
-                        Thread.Sleep(1000);
-                        return Userinput(player);
-                    }
-                    else if (player.HP + 30 > 100)
+                        Console.WriteLine("Would you like the save before exiting ?");
+                        userinp = Console.ReadLine();
+                        if (userinp == "yes")
+                        {
+                            Save(player);
+                        }
+                        else if (userinp == "no")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else
+                        {
+                            Console.WriteLine("invalid input !");
+                        }
+                        return "EXIT";
+                    } while (userinp == "yes" || userinp == "no");
+
+                }
+                else if (userinp == "heal")
+                {
+                    if (player.Inventory.Contains("Ibuprofen"))
                     {
-                        Console.WriteLine("Healed to full health");
-                        player.HP = 100;
-                        player.Inventory.Remove("Ibuprofen");
-                        Thread.Sleep(1000);
-                        return Userinput(player);
+                        if (player.HP == 100)
+                        {
+                            Console.WriteLine("I don't need to heal righ tnow");
+                            Thread.Sleep(1000);
+                            return Userinput(player);
+                        }
+                        else if (player.HP + 30 > 100)
+                        {
+                            Console.WriteLine("Healed to full health");
+                            player.HP = 100;
+                            player.Inventory.Remove("Ibuprofen");
+                            Thread.Sleep(1000);
+                            return Userinput(player);
+                        }
+                        else
+                        {
+                            Console.WriteLine("I took a Ibuprofen");
+                            player.HP += 30;
+                            player.Inventory.Remove("Ibuprofen");
+                            Thread.Sleep(1000);
+                            return Userinput(player);
+                        }
+
                     }
                     else
                     {
-                        Console.WriteLine("I took a Ibuprofen");
-                        player.HP += 30;
-                        player.Inventory.Remove("Ibuprofen");
+                        Console.WriteLine("No healing items found");
                         Thread.Sleep(1000);
                         return Userinput(player);
                     }
@@ -438,16 +478,9 @@ namespace Lõputöö
                 }
                 else
                 {
-                    Console.WriteLine("No healing items found");
-                    Thread.Sleep(1000);
-                    return Userinput(player);
+                    return userinp.ToLower();
+
                 }
-
-            }
-            else
-            {
-                return userinp.ToLower();
-
             }
         }
 
@@ -499,13 +532,15 @@ namespace Lõputöö
         /// <param name="player">imports the player detains</param>
         public static void Beginning(Player player)
         {
+            string userinp = string.Empty;
+            player.GameStage = "Beginning";
             Console.WriteLine("P.S. if you are done reading the text press enter");
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.Clear();
             player.Stats();
             Console.WriteLine("Hmm.. it's quite hot outside today\nI wonder how hot is it outside");
             Console.WriteLine("Check weather ? yes/no");
-            string userinp = Userinput(player);
+            userinp = Userinput(player);
             if (userinp == "yes")
             {
                 Console.WriteLine("I open the weather app on my phone");
@@ -520,11 +555,11 @@ namespace Lõputöö
                 Console.ReadLine();
             }
             Console.WriteLine("Boss: hey I know you have to leave early today but could you\nmaybe turn off the electricity tower on the line 27.\nNot nessesary so if you can't its fine I'll just do it tomorrow");
-            Console.ReadLine();
+            userinp = Userinput(player);
             if (player.Inventory.Contains("Keycard"))
             {
                 Console.WriteLine("Sorry boss I dont have the Keycard on me at the moment");
-                Console.ReadLine();
+                userinp = Userinput(player);
             }
             else if (!player.Inventory.Contains("Keycard"))
             {
@@ -545,7 +580,7 @@ namespace Lõputöö
                     else
                     {
                         Console.WriteLine("OHH SHI this is bad let's just hope noone notices");
-                        Console.ReadLine();
+                        userinp = Userinput(player);
                         player.GameStage = nameof(StageNames.FireStart);
                         return;
                     }
@@ -553,7 +588,7 @@ namespace Lõputöö
                 else
                 {
                     Console.WriteLine("I decide to not pull the lever since it looked abit broken");
-                    Console.ReadLine();
+                    userinp = Userinput(player);
                     player.GameStage = nameof(StageNames.FireStart);
                     return;
                 }
@@ -561,7 +596,7 @@ namespace Lõputöö
             }
 
             Console.WriteLine("Boss: it's alright I'll turn it off tomorrow then");
-            Console.ReadLine();
+            userinp = Userinput(player);
             player.GameStage = nameof(StageNames.FireStart);
         }
 
@@ -602,11 +637,11 @@ namespace Lõputöö
         {
             string userinp = string.Empty;
             Console.WriteLine("Mmmm... I should get up from bed its 7.10am already");
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.WriteLine("a steaming coffee would be nice on my one free day off\n");
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.WriteLine("I get up drowsy in PJ's go to my kitchen and make myself a coffee\n");
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.WriteLine("What the hell is that *There seems to be a massive smoke cloud about 5 miles away*");
             Console.WriteLine("Report fire ? yes/no");
             userinp = Userinput(player);
@@ -621,22 +656,22 @@ namespace Lõputöö
                     911 > Ok we're on it , but currentl there is no danger to #$@!@.
                     me  > Alright, thank you.
                     """);
-                Console.ReadLine();
+                userinp = Userinput(player);
             }
             else
             {
                 Console.WriteLine("I wonder if I can see what's going on in the news");
                 Console.WriteLine("*I slump down onto the sofa and check the news*");
-                Console.ReadLine();
+                userinp = Userinput(player);
                 Console.WriteLine("""
                     Channel 1 news > Buy this vaccume cleaner NOW! it sucks.
                     Channel 2 news > Snakes don't have eyelids. If you see a snake blink, that's a legless lizard.
                     Channel 3 news > Squidgame now in Hindian language, watch it now on Channel 3.
                     Cartoon Network > New episode of Spongebob Squarepants coming out in 5 minutes, stay tuned.
                     """);
-                Console.ReadLine();
+                userinp = Userinput(player);
                 Console.WriteLine("I guess they got it under control");
-                Console.ReadLine();
+                userinp = Userinput(player);
 
             }
             Console.WriteLine("Do I pack my things just incase ?");
@@ -647,13 +682,13 @@ namespace Lõputöö
                 player.Inventory.Add("Clothes");
                 player.Inventory.Add("Water bottle");
                 player.Money = 2762.64;
-                Console.ReadLine();
+                userinp = Userinput(player);
                 player.GameStage = nameof(StageNames.EscapeChp1);
             }
             else
             {
                 Console.WriteLine("Nah why should I they got it under control");
-                Console.ReadLine();
+                userinp = Userinput(player);
                 player.GameStage = nameof(StageNames.EscapeChp1);
             }
 
@@ -670,22 +705,21 @@ namespace Lõputöö
             string userinp = string.Empty;
             string Choice1 = string.Empty;
             Console.WriteLine("Ohh a notification, maybe she replied to me finally\n");
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.WriteLine("""
                 EMERGANCY ALERT:
                 A large fire has enveloped the city  perimeter
                 a city wide evacuation has been ordered, please
                 follow the emergency evacuation routes and stay safe.
                 """);
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.WriteLine("I should really get moving. The sky is so orange from the fire");
-            Console.ReadLine();
+            userinp = Userinput(player);
             do
             {
                 Console.Clear();
                 player.Stats();
-                do
-                {
+               
                     Console.WriteLine("should I go by car or walk tho ? car/walk");
                     userinp = Userinput(player);
                     if (userinp == "car")
@@ -700,13 +734,10 @@ namespace Lõputöö
                     {
                         Console.WriteLine("I can't do that (press enter twice)");
                     }
-                } while (userinp == "walk" && userinp == "car");
-
-
-            } while (Userinput(player) != "car" && Userinput(player) != "walk");
+            } while (userinp != "car" && userinp != "walk");
 
             player.GameStage = nameof(StageNames.EscapeChp2);
-            //next chapters gonna be short af cuz this took way too much time.
+            //next chapters gonna be shorter cuz this took way too much time.
         }
 
         /// <summary>
@@ -715,11 +746,12 @@ namespace Lõputöö
         /// <param name="player">Imports player details</param>
         public static void CarRoute(Player player)
         {
+            string userinp = string.Empty;
             Console.WriteLine("I get in my car and start driving away");
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.WriteLine("Suddenly a burning tree falls on my car");
             player.HP -= 33;
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.Clear();
             player.Stats();
             Console.WriteLine("I manage to make it out but I notice my clothes are burnt");
@@ -761,11 +793,12 @@ namespace Lõputöö
             Console.Clear();
             player.Stats();
             Console.WriteLine("it seems the more dangerous option but I think its the best");
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.WriteLine("Holy shi- the fire has evolved so much already everything is burning");
-            Console.ReadLine();
+            userinp = Userinput(player);
             string textoutput = JumpCheck(player,rng);
             Console.WriteLine(textoutput);
+            player.GameStage = "EscapeChp2";
         }
 
         /// <summary>
@@ -776,9 +809,9 @@ namespace Lõputöö
         {
             string userinp = string.Empty;
             Console.WriteLine("I manage to get out of the worst zone, the fire is behind me");
-            Console.ReadLine();
+            userinp = Userinput(player);
             Console.WriteLine("It's so dam unclear here there is ash floating around everywhere");
-            Console.ReadLine();
+            userinp = Userinput(player);
             do
             {
                 Console.WriteLine("Omgg it's the hospital, maybe there is someone there to help me\nShould I go to check ? yes/no");
@@ -786,13 +819,13 @@ namespace Lõputöö
                 if (userinp == "yes")
                 {
                     Console.WriteLine("let's see if there is anyone around");
-                    Console.ReadLine();
+                    userinp = Userinput(player);
                     player.GameStage = nameof(StageNames.BadEnding1);
                 }
                 else
                 {
                     Console.WriteLine("I bet everyone already evacuated I should just keep moving");
-                    Console.ReadLine();
+                    userinp = Userinput(player);
                     player.GameStage = nameof(StageNames.EscapeChp3);
                 }
             } while (userinp == "yes" && userinp == "no");
@@ -805,28 +838,29 @@ namespace Lõputöö
         public static void EscapeChp3(Player player)
         {
             string userinp = string.Empty;
+            string Forward = string.Empty;   //simple used to move forwad and not mix up the actual needed userinput like previous chapters had
             Console.WriteLine("My legs hurt already how far is the exit anyway\n");
-            Console.ReadLine();
+            Forward = Userinput(player);
             Console.WriteLine("I can't breath much it's so bad\n");
-            Console.ReadLine();
+            Forward = Userinput(player);
             Console.WriteLine("there is a shop behind the corner, maybe they have some masks there\n");
-            Console.ReadLine();
-            
+            Forward = Userinput(player);
+
             for (int i = 0; i < 7; i++) 
             { 
             Console.Clear();
             player.Stats();
             Console.WriteLine("The door is locked, then I'll just kick it in (enter to kick)\n");
             Console.WriteLine("The door wount budge, Try again kicks> "+i);
-            Console.ReadLine();
+            Forward = Userinput(player);
             }
 
             Console.WriteLine("*The door flies open*");
-            Console.ReadLine();
+            Forward = Userinput(player);
             Console.Clear();
             player.Stats();
             Console.WriteLine("Yess finally inside, let's see here");
-            Console.ReadLine();
+            Forward = Userinput(player);
             ShelfItems(player);
             do
             {
@@ -858,6 +892,7 @@ namespace Lõputöö
         public static void ShelfItems(Player player)
         {
             string userinp = string.Empty;
+            string Forward = string.Empty;
             do
             {
                 Console.Clear();
@@ -874,6 +909,7 @@ namespace Lõputöö
                 userinp = Userinput(player);
                 switch(userinp)
                 {
+                    
                     case "1":
                         if (player.Inventory.Contains("Canned Tuna"))
                         {
@@ -888,13 +924,13 @@ namespace Lõputöö
                             {
                                 Console.WriteLine("Hmmm Tuna it smells bad but it's yummy I'' take it");
                                 player.Inventory.Add("Canned Tuna");
-                                Console.ReadLine();
-                            }
+                                Forward = Userinput(player);
+                        }
                             else if (userinp == "no")
                             {
                                 Console.WriteLine("I decide to not take the canned food");
-                                Console.ReadLine();
-                            }
+                                Forward = Userinput(player);
+                        }
                             else
                             {
                                 Console.WriteLine("Invalid input !");
@@ -918,13 +954,13 @@ namespace Lõputöö
                             {
                                 Console.WriteLine("Thats exactly what I needed");
                                 player.Inventory.Add("Water bottle");
-                                Console.ReadLine();
-                            }
+                                Forward = Userinput(player);
+                        }
                             else if (userinp == "no")
                             {
                                 Console.WriteLine("I'm not that thirsty");
-                                Console.ReadLine();
-                            }
+                                Forward = Userinput(player);
+                        }
                             else
                             {
                                 Console.WriteLine("Invalid input !");
@@ -949,13 +985,13 @@ namespace Lõputöö
                             {
                                 Console.WriteLine("Good I can wash my eyes with that later");
                                 player.Inventory.Add("Bleach");
-                                Console.ReadLine();
-                            }
+                                Forward = Userinput(player);
+                        }
                             else if (userinp == "no")
                             {
                                 Console.WriteLine("What was I even thinking of doing with bleach ?");
-                                Console.ReadLine();
-                            }
+                                Forward = Userinput(player);
+                        }
                             else
                             {
                                 Console.WriteLine("Invalid input !");
@@ -987,30 +1023,30 @@ namespace Lõputöö
                                         if (player.HP == 100)
                                         {
                                             Console.WriteLine("I don't need to use it now");
-                                            Console.ReadLine();
+                                            Forward = Userinput(player);
                                             player.Inventory.Add("Ibuprofen");
                                         }
                                         else if(player.HP + 30 > 100)
                                         {
                                             Console.WriteLine("I take the Ibuprofen and it helps with the pain");
                                             player.HP = 100;
-                                            Console.ReadLine();
-                                            break;
+                                            Forward = Userinput(player);
+                                        break;
                                         }
                                         else
                                         {
                                             Console.WriteLine("I take the Ibuprofen and it helps with the pain");
                                             player.HP += 30;
-                                            Console.ReadLine();
-                                            break;
+                                             Forward = Userinput(player);
+                                        break;
                                         }
                                     }
                                     else if (userinp == "no")
                                     {
                                         Console.WriteLine("I'll put it in my bag");
                                         player.Inventory.Add("Ibuprofen");
-                                        Console.ReadLine();
-                                        break;
+                                         Forward = Userinput(player);
+                                         break;
                                     }
                                     else
                                     {
@@ -1021,7 +1057,7 @@ namespace Lõputöö
                             else if (userinp == "no")
                             {
                                 Console.WriteLine("Medicen is for pussys");
-                                Console.ReadLine();
+                                Forward = Userinput(player);
                             }
                             else
                             {
@@ -1048,13 +1084,13 @@ namespace Lõputöö
                             {
                                 Console.WriteLine("I got what I waslooking for. I can finally leave now");
                                 player.Inventory.Add("Filtered mask");
-                                Console.ReadLine();
+                                Forward = Userinput(player);
                             }
                             else if (userinp == "no")
                             {
                                 Console.WriteLine("Not like I came here for it");
                                 player.HP -= 5;
-                                Console.ReadLine();
+                                Forward = Userinput(player);
                             }
                             else
                             {
@@ -1070,7 +1106,7 @@ namespace Lõputöö
             Console.Clear();
             player.Stats();
             Console.WriteLine("I leave the store");
-            Console.ReadLine();
+            Forward = Userinput(player);
 
         }
 
@@ -1081,8 +1117,9 @@ namespace Lõputöö
         /// <param name="rng">for le kitty rng</param>
         public static void EsccapeChp4(Player player, Random rng)
         {
+            string Forward = string.Empty;
             Console.WriteLine("I'll walk abit they seem to be stopped waiting in a line");
-            Console.ReadLine();
+            Forward = Userinput(player);
             int catrng = rng.Next(1, 100);
             for (int i = 0; i < catrng; i++)
             {
@@ -1101,13 +1138,13 @@ namespace Lõputöö
                 {
                     Console.WriteLine("Sooo so so close");
                 }
-                Console.ReadLine();
+                Forward = Userinput(player);
             }
             Console.WriteLine("Caught you, you slippery eel");
-            Console.ReadLine();
+            Forward = Userinput(player);
             player.Inventory.Add("Cat");
             Console.WriteLine("I should find their owner, maybe they are in the line of cars");
-            Console.ReadLine();
+            Forward = Userinput(player);
             player.GameStage = nameof(StageNames.FinalEscape);
 
 
@@ -1120,6 +1157,7 @@ namespace Lõputöö
         /// <param name="player">Import player details</param>
         public static void FinalEscape(Player player)
         {
+            string Forward = string.Empty;
             string userinp = string.Empty;
             Console.WriteLine("The red car seems promising");
             userinp = Userinput(player);
@@ -1144,7 +1182,7 @@ namespace Lõputöö
                     Me   > It's just some canned tuna.
                     Girl > EWWW get away from me with that nasty smell
                     """);
-                Console.ReadLine();
+                Forward = Userinput(player);
 
                 Console.WriteLine("Let's see what the blue car has in store");
                 userinp = Userinput(player);
@@ -1160,7 +1198,7 @@ namespace Lõputöö
                                 Me    > So can I come with you now ?
                                 Girl  > Of course, hop in , the queue is starting to move finally.
                                 """);
-                    Console.ReadLine();
+                    Forward = Userinput(player);
                     player.Inventory.Remove("Cat");
                     player.GameStage = nameof(StageNames.BadEnding2);
                 }

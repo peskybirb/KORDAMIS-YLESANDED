@@ -22,13 +22,17 @@ namespace Lõputöö
             - gg long asf projekt
             */
 
-            // 05.04.26
-            // make save function good again
-            // fix many bugs
-            // make a death function
-
             bool playerAlive = true;
-            Player player = new Player(100, false, string.Empty, 0, new List<string>() {"Phone" }, "SMenu");
+            Player player = new Player(100, false, string.Empty, 0, new List<string>() { "Phone" }, "");
+            if (!File.Exists("AutoSave.txt"))
+            {
+                player.GameStage = "SMenu";
+            }
+            else
+            {
+                player.GameStage = "CMenu";
+            }
+
             Random rng = new Random();
             
             do
@@ -40,12 +44,11 @@ namespace Lõputöö
                 {
                     playerAlive = false;
                     Console.WriteLine("You have died. Game over.");
+                    // unused but donsent cause problems 
                 }
             }
             while (playerAlive == true);
 
         }
-
-
     }
 }

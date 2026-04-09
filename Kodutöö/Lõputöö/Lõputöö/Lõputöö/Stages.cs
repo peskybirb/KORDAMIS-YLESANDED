@@ -28,9 +28,12 @@ namespace Lõputöö
 {
     public class Stages
     {
+        /// <summary>
+        /// Names for the stages to minimize spelling mistakes
+        /// </summary>
         public enum StageNames
         {
-            GoodEnding, BadEnding1, BadEnding2, Beginning, FireStart, EscapeChp1, EscapeChp2, EscapeChp3, EscapeChp4, FinalEscape, SMenu, Save, Load, Exit, FinalWords
+            GoodEnding, BadEnding1, BadEnding2, Beginning, FireStart, EscapeChp1, EscapeChp2, EscapeChp3, EscapeChp4, FinalEscape, SMenu, Save, Load, Exit, FinalWords, Controls, CMenu, AutoSave, LoadAutoSave
         }
 
         /// <summary>
@@ -90,6 +93,81 @@ namespace Lõputöö
         }
 
         /// <summary>
+        /// Loads from auto save file player details
+        /// </summary>
+        /// <param name="player">loads player details</param>
+        public static void LoadAutoSave(Player player)
+        {
+            string saveName = "AutoSave.txt";
+            if (File.Exists(saveName))
+            {
+                string[] saveData = File.ReadAllLines(saveName);
+
+                int hp = int.Parse(saveData[0]);
+                double money = double.Parse(saveData[1]);
+                string statEffectName = saveData[2];
+                string gameStage = saveData[3];
+                List<string> inventory = saveData[4].Split(',').ToList();
+
+                player.HP = hp;
+                player.Money = money;
+                player.StatEffectName = statEffectName;
+                if (statEffectName == string.Empty)
+                {
+                    player.StatusEffect = false;
+                }
+                else
+                {
+                    player.StatusEffect = true;
+                }
+
+                player.GameStage = gameStage;
+                player.Inventory = inventory;
+
+                Console.WriteLine($"HP: {hp}");
+                Thread.Sleep(300);
+                Console.WriteLine($"Money: {money}");
+                Thread.Sleep(300);
+                if (statEffectName == string.Empty)
+                {
+                    Console.WriteLine($"Staus Effect: none");
+                }
+                else
+                {
+                    Console.WriteLine($"Status Effect: {statEffectName}");
+                }
+                Thread.Sleep(300);
+                Console.WriteLine($"GameStage: {gameStage}");
+                Thread.Sleep(300);
+                foreach (string item in inventory)
+                {
+                    Console.WriteLine($"Item: {item}");
+                    Thread.Sleep(150);
+                }
+
+
+                //load into the player` 
+                Console.WriteLine("Load successful !");
+                Thread.Sleep(1000);
+            }
+        }
+        
+        /// <summary>
+        /// To Save automatically at the end of every chapter.
+        /// </summary>
+        /// <param name="player">player details</param>
+        public static void AutoSave(Player player)
+        {
+            string AutoSaveName = "AutoSave.txt";
+            File.Create(AutoSaveName).Close();
+            File.AppendAllText(AutoSaveName, player.HP.ToString() + "\n");
+            File.AppendAllText(AutoSaveName, player.Money.ToString() + "\n");
+            File.AppendAllText(AutoSaveName, player.StatEffectName.ToString() + "\n");
+            File.AppendAllText(AutoSaveName, player.GameStage.ToString() + "\n");
+            File.AppendAllText(AutoSaveName, string.Join(",", player.Inventory));
+        }
+
+        /// <summary>
         /// Looks at the player gameStage and places the player in the corresponding stage method so the game can continue.
         /// </summary>
         /// <param name="player">imports player details</param>
@@ -133,7 +211,7 @@ namespace Lõputöö
                 case nameof(StageNames.EscapeChp4):
                     Console.Clear();
                     player.Stats();
-                    EsccapeChp4(player,rng);
+                    EscapeChp4(player,rng);
                     break;
 
                 case nameof(StageNames.FinalEscape):
@@ -185,8 +263,29 @@ namespace Lõputöö
                     Exit(player);
                     //Exiting
                     break;
+
+                case nameof(StageNames.Controls):
+                    Console.Clear();
+                    Controls(player);
+                    break;
+
+                case nameof(StageNames.CMenu):
+                    Console.Clear();
+                    CMenu(player);
+                    break;
+
+                case nameof(StageNames.LoadAutoSave):
+                    Console.Clear();
+                    LoadAutoSave(player);
+                    break;
+
+                case "DeBug0":
+                    Console.Clear();
+                    DeBug0(player);
+                    break;
+
                 default:
-                    Console.WriteLine("You found a bug ||W|| lmk where it happened and I might be able to fix it");
+                    Console.WriteLine("You found a bug >w< lmk where it happened and I might be able to fix it");
                     Console.ReadLine();
                     break;
             }
@@ -387,14 +486,18 @@ namespace Lõputöö
             player.HP = 1;
             string userinp = string.Empty;
             Random newrng = new Random();
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine("""
                 _____________________________
                 |                           |
                 |                           |
-                |       YOU HAVE DIED       |        
+                |       YOU HAVE DIED       |
                 |                           |
                 |___________________________|
                 """);
+            Console.ResetColor();
+           
             Console.WriteLine("The game will exit\nRelaunch the game to load save");
             userinp = Userinput(player);
             Environment.Exit(0);
@@ -446,7 +549,7 @@ namespace Lõputöö
                     {
                         if (player.HP == 100)
                         {
-                            Console.WriteLine("I don't need to heal righ tnow");
+                            Console.WriteLine("I don't need to heal right now");
                             Thread.Sleep(1000);
                             return Userinput(player);
                         }
@@ -485,6 +588,92 @@ namespace Lõputöö
         }
 
         /// <summary>
+        /// Explains controls to the user.
+        /// </summary>
+        /// <param name="player">imports player to take back later</param>
+        public static void Controls(Player player)
+        {
+            Console.WriteLine("""
+                Controls:
+
+                - To move forward press enter
+
+                - in some cases you are promted with a decision
+                  which default answer is usually no
+
+                - in some cases you are promted with a number (enter just the number)
+
+                - type "heal" to heal for 30 HP (will take affect after a refresh of the command line)
+
+                - type "exit" to save and exit the game
+
+                P.S interactions are NOT case sensitive
+
+                Press enter to go back.
+                """);
+            player.GameStage = nameof(StageNames.SMenu);
+            Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Continue menu will include the option to continue from AutoSave
+        /// </summary>
+        /// <param name="player">player details</param>
+        public static void CMenu(Player player)
+        {
+            string UserInput = string.Empty;
+            do
+            {
+                Console.WriteLine("""
+                 ---------------
+                | MAIN MENU:    |
+                |               |
+                | 1.Continue    |
+                | 2.New Game    |
+                | 3.Load Game   |
+                | 4.Controls    |
+                | 5.Exit        |
+                 ---------------
+
+                 Welcome, back!
+                """);
+                UserInput = Userinput(player);
+
+                if (UserInput == "1")
+                {
+                    player.GameStage = nameof(StageNames.LoadAutoSave);
+                }
+                else if (UserInput == "2")
+                {
+                    player.GameStage = nameof(StageNames.Beginning);
+                }
+                else if (UserInput == "3")
+                {
+                    player.GameStage = nameof(StageNames.Load);
+                }
+                else if (UserInput == "4")
+                {
+                    player.GameStage = nameof(StageNames.Controls);
+                }
+                else if (UserInput == "5")
+                {
+                    Environment.Exit(0);
+                }
+                else if(UserInput == "debug0")
+                {
+                    player.GameStage = "DeBug0";
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Invalid input !");
+                    Thread.Sleep(500);
+                }
+            }
+            while (UserInput == "1" && UserInput == "2" && UserInput == "3" && UserInput == "4" && UserInput == "debug0");
+        }
+
+        /// <summary>
         /// The start menu where u can start a new game , load game or exit
         /// </summary>
         /// <param name="player">loads in the player details from the player class</param>
@@ -499,11 +688,12 @@ namespace Lõputöö
                 |               |
                 | 1.New Game    |
                 | 2.Load Game   |
-                | 3.Exit        |
+                | 3.Controls    |
+                | 4.Exit        |
                  ---------------
                 """);
                 UserInput = Userinput(player);
-
+                
                 if (UserInput == "1")
                 {
                     player.GameStage = nameof(StageNames.Beginning);
@@ -514,7 +704,15 @@ namespace Lõputöö
                 }
                 else if (UserInput == "3")
                 {
+                    player.GameStage = nameof(StageNames.Controls);
+                }
+                else if(UserInput == "4")
+                {
                     Environment.Exit(0);
+                }
+                else if(UserInput == "debug0")
+                {
+                    player.GameStage = "DeBug0";
                 }
                 else
                 {
@@ -523,7 +721,7 @@ namespace Lõputöö
                     Thread.Sleep(500);
                 }
             }
-            while (UserInput == "1" && UserInput == "2" && UserInput == "3");
+            while (UserInput == "1" && UserInput == "2" && UserInput == "3" && UserInput == "4" && UserInput == "debug0");
         }
 
         /// <summary>
@@ -532,6 +730,7 @@ namespace Lõputöö
         /// <param name="player">imports the player detains</param>
         public static void Beginning(Player player)
         {
+            AutoSave(player);
             string userinp = string.Empty;
             player.GameStage = "Beginning";
             Console.WriteLine("P.S. if you are done reading the text press enter");
@@ -556,12 +755,12 @@ namespace Lõputöö
             }
             Console.WriteLine("Boss: hey I know you have to leave early today but could you\nmaybe turn off the electricity tower on the line 27.\nNot nessesary so if you can't its fine I'll just do it tomorrow");
             userinp = Userinput(player);
-            if (player.Inventory.Contains("Keycard"))
+            if (!player.Inventory.Contains("Keycard"))
             {
                 Console.WriteLine("Sorry boss I dont have the Keycard on me at the moment");
                 userinp = Userinput(player);
             }
-            else if (!player.Inventory.Contains("Keycard"))
+            else if (player.Inventory.Contains("Keycard"))
             {
                 Console.WriteLine("I'll see what I can do");
                 Console.WriteLine("I enter the control room with the keycard and see the lever to turn off the electricity tower");
@@ -570,7 +769,7 @@ namespace Lõputöö
                 if (userinp == "yes")
                 {
                     Console.WriteLine("I pull the lever but it braks off clean");
-                    if (!player.Inventory.Contains("Spare lever"))
+                    if (player.Inventory.Contains("Spare lever"))
                     {
                         Console.WriteLine("Thank god I came prepared");
                         Console.ReadLine();
@@ -635,6 +834,7 @@ namespace Lõputöö
         /// <param name="player">imports player details</param>
         public static void FireStart(Player player)
         {
+            AutoSave(player);
             string userinp = string.Empty;
             Console.WriteLine("Mmmm... I should get up from bed its 7.10am already");
             userinp = Userinput(player);
@@ -701,7 +901,7 @@ namespace Lõputöö
         /// <param name="rng">imports random for the rng choice</param>
         public static void EscapeChp1(Player player,Random rng)
         {
-
+            AutoSave(player);
             string userinp = string.Empty;
             string Choice1 = string.Empty;
             Console.WriteLine("Ohh a notification, maybe she replied to me finally\n");
@@ -807,6 +1007,7 @@ namespace Lõputöö
         /// <param name="player">Imports player data to change data</param>
         public static void EscapeChp2(Player player)
         {
+            AutoSave(player);
             string userinp = string.Empty;
             Console.WriteLine("I manage to get out of the worst zone, the fire is behind me");
             userinp = Userinput(player);
@@ -837,6 +1038,7 @@ namespace Lõputöö
         /// <param name="player">Imports the player details</param>
         public static void EscapeChp3(Player player)
         {
+            AutoSave(player);
             string userinp = string.Empty;
             string Forward = string.Empty;   //simple used to move forwad and not mix up the actual needed userinput like previous chapters had
             Console.WriteLine("My legs hurt already how far is the exit anyway\n");
@@ -1115,8 +1317,9 @@ namespace Lõputöö
         /// </summary>
         /// <param name="player">imports player details to add cat to inventory</param>
         /// <param name="rng">for le kitty rng</param>
-        public static void EsccapeChp4(Player player, Random rng)
+        public static void EscapeChp4(Player player, Random rng)
         {
+            AutoSave(player);
             string Forward = string.Empty;
             Console.WriteLine("I'll walk abit they seem to be stopped waiting in a line");
             Forward = Userinput(player);
@@ -1157,6 +1360,7 @@ namespace Lõputöö
         /// <param name="player">Import player details</param>
         public static void FinalEscape(Player player)
         {
+            AutoSave(player);
             string Forward = string.Empty;
             string userinp = string.Empty;
             Console.WriteLine("The red car seems promising");
@@ -1314,6 +1518,212 @@ namespace Lõputöö
             }
 
         }
+
+        /// <summary>
+        /// A way to debug the program to find bugs and stuff 
+        /// </summary>
+        /// <param name="player">gotta import player details</param>
+        public static void DeBug0(Player player)
+        {
+            string userinp = string.Empty;
+                do
+                {
+                Console.Clear();
+                    Console.WriteLine("""
+                    1.Items
+                    2.Stages
+                    3.Endings
+                    """);
+                    userinp = Console.ReadLine() ??string.Empty;
+                    
+                 if(userinp == "1")
+                 {
+                    do
+                    {
+                        Console.Clear();
+                        player.Stats();
+                        Console.WriteLine("""
+                            1. Give Keycard (Bad ending 1 item)
+                            2. Give Spare lever (Bad ending 2 item)
+                            3. Give water bottle
+                            4. Give Ibuprofen
+                            5. ALL
+
+                            "back" to return
+                            """);
+                        userinp = Console.ReadLine() ??string.Empty;
+                        switch(userinp)
+                        {
+                            case"1":
+                                player.Inventory.Add("Keycard");
+                                Console.WriteLine("Added Keycard");
+                                Thread.Sleep(500);
+                                userinp = string.Empty;
+                                break;
+                            case "2":
+                                player.Inventory.Add("Spare lever");
+                                Console.WriteLine("Added Spare lever");
+                                Thread.Sleep(500);
+                                userinp = string.Empty;
+                                break;
+                            case "3":
+                                player.Inventory.Add("Water bottle");
+                                Console.WriteLine("Added Water bottle");
+                                Thread.Sleep(500);
+                                userinp = string.Empty;
+                                break;
+                            case "4":
+                                player.Inventory.Add("Ibuprofen");
+                                Console.WriteLine("Added Ibuprofen");
+                                Thread.Sleep(500);
+                                userinp = string.Empty;
+                                break;
+                            case "5":
+                                player.Inventory.Add("Keycard");
+                                player.Inventory.Add("Spare lever");
+                                player.Inventory.Add("Water bottle");
+                                player.Inventory.Add("Ibuprofen");
+                                Console.WriteLine("Added Everything x1");
+                                Thread.Sleep(500);
+                                userinp = string.Empty;
+                                break;
+                            case "back":
+                                break;
+                            default:
+                                Console.WriteLine("Not an option");
+                                Thread.Sleep(700);
+                                break;
+                        }
+                    } while (userinp != "back");
+                 }
+                 else if(userinp == "2")
+                 {
+                    do
+                    {
+                        Random debugrng = new Random();
+                        Console.Clear();
+                        Console.WriteLine("""
+                        1. Beginning
+                        2. Firestart
+                        3. Escapechp1
+                        4. Escapechp2
+                        5. Escapechp3
+                        6. Escapechp4
+                        7. FinalEscape
+
+                        "back" to return
+                        """);
+                        userinp = Console.ReadLine() ?? string.Empty;
+                        switch (userinp)
+                        {
+                            case "1":
+                                Beginning(player);
+                                userinp = string.Empty;
+                                break;
+
+                            case "2":
+                                FireStart(player);
+                                userinp = string.Empty;
+                                break;
+
+                            case "3":
+                                EscapeChp1(player,debugrng);
+                                userinp = string.Empty;
+                                break;
+
+                            case "4":
+                                EscapeChp2(player);
+                                userinp = string.Empty;
+                                break;
+
+                            case "5":
+                                EscapeChp3(player);
+                                userinp = string.Empty;
+                                break;
+
+                            case "6":
+                               EscapeChp4(player, debugrng);
+                               userinp = string.Empty;
+                               break;
+
+                            case "7":
+                                FinalEscape(player);
+                                userinp = string.Empty;
+                                break;
+                            case"back":
+                                break;
+                            default:
+                                Console.WriteLine("Not an option");
+                                Thread.Sleep(700);
+                                break;
+                        }
+                    } while(userinp != "back");
+                    
+                }
+                 else if (userinp == "3")
+                 {
+                    do
+                    {
+                        Random debugrng = new Random();
+                        Console.Clear();
+                        Console.WriteLine("""
+                        1. Good Ending
+                        2. Bad Ending 1
+                        3. Bad Ending 2
+
+                        "back" to return
+                        """);
+                        userinp = Console.ReadLine() ?? string.Empty;
+                        switch (userinp)
+                        {
+                            case "1":
+                                Endings.GoodEnding(player);
+                                userinp = string.Empty;
+                                break;
+
+                            case "2":
+                                Endings.BadEnding1(player);
+                                userinp = string.Empty;
+                                break;
+
+                            case "3":
+                                Endings.BadEnding2(player);
+                                userinp = string.Empty;
+                                break;
+                            case "back":
+                                break;
+                            default:
+                                Console.WriteLine("Not an option");
+                                Thread.Sleep(700);
+                                break;
+                        }
+                    } while (userinp != "back");
+                }
+                else if(userinp == "exit")
+                {
+
+                }
+                 else
+                 {
+                    Console.WriteLine("Invalid input");
+                    Thread.Sleep(500);
+                 } 
+                } while (userinp != "exit");
+
+            if (!File.Exists("AutoSave.txt"))
+            {
+                player.GameStage = "SMenu";
+            }
+            else
+            {
+                player.GameStage = "CMenu";
+            }
+
+
+
+
+
+
+        }
     }
 }
-

@@ -611,7 +611,14 @@ namespace Lõputöö
 
                 Press enter to go back.
                 """);
-            player.GameStage = nameof(StageNames.SMenu);
+            if (!File.Exists("AutoSave.txt"))
+            {
+                player.GameStage = "SMenu";
+            }
+            else
+            {
+                player.GameStage = "CMenu";
+            }
             Console.ReadLine();
         }
 
@@ -753,7 +760,9 @@ namespace Lõputöö
                     """);
                 Console.ReadLine();
             }
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Boss: hey I know you have to leave early today but could you\nmaybe turn off the electricity tower on the line 27.\nNot nessesary so if you can't its fine I'll just do it tomorrow");
+            Console.ResetColor();
             userinp = Userinput(player);
             if (!player.Inventory.Contains("Keycard"))
             {
@@ -768,7 +777,9 @@ namespace Lõputöö
                 userinp = Userinput(player);
                 if (userinp == "yes")
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("I pull the lever but it braks off clean");
+                    Console.ResetColor();
                     if (player.Inventory.Contains("Spare lever"))
                     {
                         Console.WriteLine("Thank god I came prepared");
@@ -793,8 +804,9 @@ namespace Lõputöö
                 }
 
             }
-
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Boss: it's alright I'll turn it off tomorrow then");
+            Console.ResetColor();
             userinp = Userinput(player);
             player.GameStage = nameof(StageNames.FireStart);
         }
@@ -863,12 +875,14 @@ namespace Lõputöö
                 Console.WriteLine("I wonder if I can see what's going on in the news");
                 Console.WriteLine("*I slump down onto the sofa and check the news*");
                 userinp = Userinput(player);
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("""
-                    Channel 1 news > Buy this vaccume cleaner NOW! it sucks.
-                    Channel 2 news > Snakes don't have eyelids. If you see a snake blink, that's a legless lizard.
-                    Channel 3 news > Squidgame now in Hindian language, watch it now on Channel 3.
+                    Channel 1 news  > Buy this vaccume cleaner NOW! it sucks.
+                    Channel 2 news  > Snakes don't have eyelids. If you see a snake blink, that's a legless lizard.
+                    Channel 3 news  > Squidgame now in Hindian language, watch it now on Channel 3.
                     Cartoon Network > New episode of Spongebob Squarepants coming out in 5 minutes, stay tuned.
                     """);
+                Console.ResetColor();
                 userinp = Userinput(player);
                 Console.WriteLine("I guess they got it under control");
                 userinp = Userinput(player);
@@ -881,7 +895,7 @@ namespace Lõputöö
                 Console.WriteLine("I m gonna need my money, Clothes and let's add a water bottle too");
                 player.Inventory.Add("Clothes");
                 player.Inventory.Add("Water bottle");
-                player.Money = 2762.64;
+                player.Money += 276.63;
                 userinp = Userinput(player);
                 player.GameStage = nameof(StageNames.EscapeChp1);
             }
@@ -1533,6 +1547,8 @@ namespace Lõputöö
                     1.Items
                     2.Stages
                     3.Endings
+
+                    "exit" to return
                     """);
                     userinp = Console.ReadLine() ??string.Empty;
                     
